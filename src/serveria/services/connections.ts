@@ -1,0 +1,55 @@
+/** Collegamenti ancora incompleti. Le funzioni già operative non appartengono al backlog. */
+export const missingConnections = {
+  files: {
+    label: "Sincronizzazione delle copie IA",
+    detail: "Anteprime, ricerca nelle sottocartelle, link privati revocabili e upload riprendibili sono collegati. La sincronizzazione bidirezionale fra originali e copie IA resta un lavoro futuro.",
+    endpoints: "Contratto di sincronizzazione e gestione conflitti da definire",
+  },
+  agentFileTools: {
+    label: "Accesso File Server e gestione avanzata Libreria",
+    detail: "Restano da definire accesso agentico al File Server, importazione di originali, gestione cartelle e ripristino agentico. Le funzioni di lettura, copia, modifica e cestino della Libreria sono elencate tra quelle disponibili.",
+    endpoints: "Contratti tool, radici autorizzate e policy per azione da implementare",
+  },
+  graphEdit: {
+    label: "Esecuzione delle automazioni grafiche",
+    detail: "La mappa agentica è consultabile e Tools permette di modificare bozze grafiche. Mancano esecuzione e pianificazione delle bozze e modifica operativa dell’architettura.",
+    endpoints: "API di esecuzione/pianificazione e modifica dell’architettura da definire",
+  },
+} as const;
+export type ConnectionKey = keyof typeof missingConnections;
+
+/** Stato delle funzionalità nel codice; distinto dal collaudo sul server. */
+export const homeRoadmap = {
+  updatedAt: "12/10/2026",
+  serverEvidence: [
+    { label: "Accesso dal telefono", detail: "Accesso a Cora tramite Tailscale riscontrato nella sessione di installazione." },
+    { label: "Servizi e percorsi del server", detail: "Inventario dell’11 ottobre: API, web e database sani; storage accessibile, bridge raggiungibile e workspace allineati. Le metriche sotto mostrano lo stato corrente." },
+    { label: "Servizi di aggiornamento", detail: "Bridge host e pulsante installati e avviati; lettura della repository GitHub verificata. Resta da collaudare il ciclo completo con una nuova release." },
+  ],
+  available: [
+    { label: "Accesso e configurazione allineati", detail: "Link condivisi attraverso il login, tentativi distinti per client dal proxy fidato, endpoint Ollama unico e messaggi separati per errori di salvataggio. Richiedono ricostruzione API/web e collaudo sul server." },
+    { label: "Copie e modifiche controllate nella Libreria IA", detail: "Copie senza sovrascrittura; modifiche testuali e aggiunte Word approvate in Attività e legate alla versione letta. Cestino solo dopo conferma, senza eliminazione definitiva. Versione precedente conservata nel cestino prima della modifica." },
+
+    { label: "Diagnostica Ollama riservata", detail: "Le tracce mostrano categorie di errore riconosciute: timeout, connessione, modello non trovato, memoria, compatibilità tool e risposta del servizio. Nessun dettaglio grezzo delle eccezioni viene conservato come descrizione diagnostica." },
+    { label: "Consultazione agentica Libreria IA", detail: "Tre tool di sola lettura disponibili durante le richieste automatiche, ricerca lessicale per nome e contenuto, percorsi delle fonti e pannello attività in chat. La selezione manuale dei tool prevale. Nessuna ricerca in background." },
+    { label: "Chat e memoria persistenti", detail: "Cronologia, streaming, gestione e versioni della memoria; contesto del proprietario consultato selettivamente." },
+    { label: "Accesso, permessi e approvazioni", detail: "Login del proprietario, policy delle capability e proposte consultabili in Attività." },
+    { label: "Runtime e diagnostica", detail: "Coda, stati persistenti, cancellazione cooperativa, registro operazioni, bus eventi e profilazione." },
+    { label: "File, calendario e Tools", detail: "File server e Libreria IA con anteprime, ricerca ricorsiva, condivisioni private e upload riprendibili; calendario e bozze delle automazioni." },
+    { label: "Programmatore", detail: "Copilot, workspace isolati, 21 strumenti, skill, registro componenti, consegne ZIP e verifiche Python/contratti/TypeScript/build frontend. Preparazione, pubblicazione, applicazione e rollback delle release seguono i controlli previsti; nessuna attivazione autonoma." },
+    { label: "Allegati chat, selezione tool e Audio", detail: "Documenti allegati alle richieste, tool automatici o selezionati manualmente per il singolo invio e pagina Audio per registrazioni salvate, trascrizione locale, correzioni ed esportazione." },
+  ],
+  next: [
+    { id: "LIB-01", state: "Da collaudare", label: "Collaudare Libreria IA con Ollama", detail: "Verificare scelta autonoma dei tool, permessi, fonti e streaming con un documento di prova sul server. Registrare il risultato in Attività; i test simulati non certificano il modello." },
+    { id: "PRG-01", state: "Parziale", label: "Collaudare il Programmatore sul server", detail: "Check Docker completati sul server: isolamento Python, riconoscimento dei test falliti, TypeScript e build frontend. Correzione della cache Vite installata nel bridge e verificata. Resta una richiesta reale con qwen3:0.6b. Pubblicazione GitHub ancora da configurare: la chiave attuale è di sola lettura." },
+    { id: "PERF-01", state: "Parziale", label: "Misurare la latenza sul PC reale", detail: "Ollama qwen3:0.6b misurato: 13,60 s al primo campione (7,39 s di caricamento), poi 4,91 e 5,83 s. Tutti hanno raggiunto il limite di 64 token: risposta completa non attestata. Resta il confronto con una richiesta reale Cora e la profilazione di coda, contesto, modello e tool." },
+    { id: "DEP-01", state: "Parziale", label: "Verificare il deploy sul server", detail: "Inventario superato per servizi, storage, database, disponibilità modelli e bridge. Restano verifica dei backup, ripristino in ambiente separato e ciclo completo di una nuova release; il NAS richiede un backup distinto. L’accesso ai file di sistema in sola lettura va collaudato separatamente." },
+  ],
+  deferred: [
+    { label: "Gestione avanzata documenti IA", detail: "Da progettare modifica strutturale Word/PDF, importazione da radici esterne autorizzate e ripristino agentico. Il ripristino della versione precedente richiede una destinazione libera: spostare prima il file corrente con la pagina File." },
+    { label: "Storico delle consultazioni e ricerca estesa", detail: "Il pannello conserva fino a 200 passaggi dell’ultima richiesta nella sessione: ricaricamento e perdita di eventi non sono recuperabili. Da progettare uno storico privato per conversazione, ricerca indicizzata e OCR dei PDF scansionati. La ricerca attuale è lessicale, limitata a 2000 file esaminati e ai limiti di lettura per documento." },
+    { label: "IDE avanzato e integrazione del codice attivo", detail: "L’editor del workspace e le consegne revisionabili sono disponibili. Linguaggio assistito e terminale restano futuri. L’applicazione al server è disponibile tramite il servizio updater e conferma del proprietario, dopo preparazione del rilascio." },
+    { label: "Orchestratore autonomo", detail: "La delega del Supervisor è disponibile; l’orchestrazione autonoma resta rinviata." },
+    { label: "Automodifica e attivazione autonoma", detail: "Il Programmatore è disponibile per bozze in workspace. L’applicazione autonoma al codice attivo e l’attivazione dei componenti restano rinviate." },
+  ],
+} as const;

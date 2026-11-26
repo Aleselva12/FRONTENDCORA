@@ -1,0 +1,7026 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "radici",
+      "role": "radici",
+      "title": "Radici",
+      "note": "Requisiti e risorse su cui poggia Cora.",
+      "priority": "unknown"
+    },
+    {
+      "id": "R1",
+      "title": "R1 · Macchine e infrastruttura fisica",
+      "note": "Dispositivi e risorse, non selezione dei task",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R1.1",
+      "title": "R1.1 · Server Debian",
+      "priority": "unknown",
+      "note": "Nodo centrale operativo per Cora e servizi; GPU locale futura",
+      "status": "partial",
+      "classification": "star",
+      "code": "R1.1",
+      "sourceType": "architecture-v2",
+      "parent": "R1",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Nodo centrale operativo per Cora e servizi; GPU locale futura",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Upgrade hardware per modelli locali più grandi"
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-HW"
+      ]
+    },
+    {
+      "id": "R1.1.p1",
+      "title": "Macchina centrale",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1"
+    },
+    {
+      "id": "R1.1.p1.m1",
+      "title": "Debian",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p1"
+    },
+    {
+      "id": "R1.1.p1.m2",
+      "title": "Applicazioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p1"
+    },
+    {
+      "id": "R1.1.p1.m3",
+      "title": "Servizi 24/7",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p1"
+    },
+    {
+      "id": "R1.1.p2",
+      "title": "Risorse hardware",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1"
+    },
+    {
+      "id": "R1.1.p2.m1",
+      "title": "CPU e RAM",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p2"
+    },
+    {
+      "id": "R1.1.p2.m2",
+      "title": "Espansione GPU futura",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.1.p2"
+    },
+    {
+      "id": "R1.1.p3",
+      "title": "Continuità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1"
+    },
+    {
+      "id": "R1.1.p3.m1",
+      "title": "Indipendenza da worker esterni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p3"
+    },
+    {
+      "id": "R1.1.p3.m2",
+      "title": "Accesso SSH controllato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.1.p3"
+    },
+    {
+      "id": "R1.2",
+      "title": "R1.2 · Desktop",
+      "priority": "unknown",
+      "note": "RX 6800 con inferenza GPU riportata dall’utente; modello effettivo non sempre attestato",
+      "status": "partial",
+      "classification": "star",
+      "code": "R1.2",
+      "sourceType": "architecture-v2",
+      "parent": "R1",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Worker desktop 123 raggiunto e modello riportato corrispondente alla richiesta il 08/11/2026; prova GPU fisica non effettuata.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Misurare esplicitamente GPU e carico locale durante inferenza remota; identità macchina e modello nei run odierni corrispondono."
+        ]
+      },
+      "roadmapRefs": [],
+      "observations": [
+        {
+          "text": "Inferenza GPU sul desktop confermata dall'utente, senza misurazione automatica del commit corrente.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "R1.2.p1",
+      "title": "Capacità GPU",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2"
+    },
+    {
+      "id": "R1.2.p1.m1",
+      "title": "RX 6800 16 GB",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p1"
+    },
+    {
+      "id": "R1.2.p1.m2",
+      "title": "Profili VRAM",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p1"
+    },
+    {
+      "id": "R1.2.p2",
+      "title": "Disponibilità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2"
+    },
+    {
+      "id": "R1.2.p2.m1",
+      "title": "Attivazione esplicita",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p2"
+    },
+    {
+      "id": "R1.2.p2.m2",
+      "title": "Verifica inferenza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p2",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Scheda Architettura e traccia provider: worker 123 ha restituito qwen3-coder:30b-a3b-q4_K_M in circa 30,11 s; run completo circa 30,35 s. Attestata identità applicativa, non utilizzo GPU.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "R1.2.p3",
+      "title": "Prestazioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2"
+    },
+    {
+      "id": "R1.2.p3.m1",
+      "title": "Modello eseguito",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p3",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Risposta provider del worker 123: modello dichiarato qwen3-coder:30b-a3b-q4_K_M, uguale a quello richiesto, nella prova delle 18:42 del 08/11. La GPU fisica non è stata misurata.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "R1.2.p3.m2",
+      "title": "Tempi misurati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.2.p3",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Architettura: test remoto circa 30.110 ms; Attività: modello circa 30,11 s, run circa 30,35 s. Tempo osservato su un singolo run.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "R1.3",
+      "title": "R1.3 · Laptop",
+      "priority": "unknown",
+      "note": "Worker GPU già provato; futuro dispositivo per agente locale",
+      "status": "partial",
+      "classification": "star",
+      "code": "R1.3",
+      "sourceType": "architecture-v2",
+      "parent": "R1",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Worker GPU già provato; futuro dispositivo per agente locale",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": []
+      },
+      "roadmapRefs": [],
+      "observations": [
+        {
+          "text": "Inferenza GPU sul laptop confermata dall'utente, senza misurazione automatica del commit corrente.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "R1.3.p1",
+      "title": "Capacità GPU",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3"
+    },
+    {
+      "id": "R1.3.p1.m1",
+      "title": "Inferenza provata dall’utente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3.p1",
+      "knownIssues": [
+        "Inferenza GPU riferita riuscita, ma modello effettivo e routing da certificare"
+      ]
+    },
+    {
+      "id": "R1.3.p1.m2",
+      "title": "Profili del worker",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3.p1"
+    },
+    {
+      "id": "R1.3.p2",
+      "title": "Disponibilità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3"
+    },
+    {
+      "id": "R1.3.p2.m1",
+      "title": "Stato online e offline",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3.p2"
+    },
+    {
+      "id": "R1.3.p2.m2",
+      "title": "Tailscale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R1.3.p2"
+    },
+    {
+      "id": "R1.3.p3",
+      "title": "Espansione futura",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.3"
+    },
+    {
+      "id": "R1.3.p3.m1",
+      "title": "Agenti operativi locali",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.3.p3"
+    },
+    {
+      "id": "R1.3.p3.m2",
+      "title": "Tool autorizzati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.3.p3"
+    },
+    {
+      "id": "R1.4",
+      "title": "R1.4 · NAS dedicato",
+      "priority": "unknown",
+      "note": "Nodo futuro per foto file cloud e backup; non tutti i database per forza sul NAS",
+      "status": "planned",
+      "classification": "star",
+      "code": "R1.4",
+      "sourceType": "architecture-v2",
+      "parent": "R1",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Nodo futuro per foto file cloud e backup; non tutti i database per forza sul NAS",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Realizzare NAS dedicato senza migrare automaticamente ogni database"
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-HW",
+        "BACKUP-UPDATE"
+      ]
+    },
+    {
+      "id": "R1.4.p1",
+      "title": "Hardware NAS",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4"
+    },
+    {
+      "id": "R1.4.p1.m1",
+      "title": "Dischi e ridondanza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p1"
+    },
+    {
+      "id": "R1.4.p1.m2",
+      "title": "Acquisti e alimentazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p1"
+    },
+    {
+      "id": "R1.4.p2",
+      "title": "Archiviazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4"
+    },
+    {
+      "id": "R1.4.p2.m1",
+      "title": "Fotografie e file",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p2"
+    },
+    {
+      "id": "R1.4.p2.m2",
+      "title": "Backup Serveria",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p2"
+    },
+    {
+      "id": "R1.4.p3",
+      "title": "Servizi opzionali",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4"
+    },
+    {
+      "id": "R1.4.p3.m1",
+      "title": "Valutazione per servizio",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p3"
+    },
+    {
+      "id": "R1.4.p3.m2",
+      "title": "Non migrare automaticamente PostgreSQL",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R1.4.p3"
+    },
+    {
+      "id": "R2",
+      "title": "R2 · Dati e archiviazione",
+      "note": "Collocazione fisica e persistenza, non strumenti documentali",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R2.1",
+      "title": "R2.1 · Database e persistenza",
+      "priority": "unknown",
+      "note": "PostgreSQL pgvector e SQL aziendali; collocazione Debian NAS da decidere",
+      "status": "partial",
+      "classification": "star",
+      "code": "R2.1",
+      "sourceType": "architecture-v2",
+      "parent": "R2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "PostgreSQL pgvector e SQL aziendali; collocazione Debian NAS da decidere",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Scegliere quali DB restano sul Debian e quali dati sul NAS"
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-SW",
+        "CUSTOMER-REGISTRY"
+      ]
+    },
+    {
+      "id": "R2.1.p1",
+      "title": "PostgreSQL",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1"
+    },
+    {
+      "id": "R2.1.p1.m1",
+      "title": "Memoria e runtime",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p1"
+    },
+    {
+      "id": "R2.1.p1.m2",
+      "title": "Log e registri",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p1"
+    },
+    {
+      "id": "R2.1.p2",
+      "title": "Database applicativi",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1"
+    },
+    {
+      "id": "R2.1.p2.m1",
+      "title": "Database SQL clienti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p2"
+    },
+    {
+      "id": "R2.1.p2.m2",
+      "title": "Evita doppie anagrafiche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p2",
+      "knownIssues": [
+        "Collocazione database sul NAS non decisa; non creare duplicazioni anagrafiche"
+      ]
+    },
+    {
+      "id": "R2.1.p3",
+      "title": "Schema e collocazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1"
+    },
+    {
+      "id": "R2.1.p3.m1",
+      "title": "Versioni e migrazioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p3"
+    },
+    {
+      "id": "R2.1.p3.m2",
+      "title": "Database Debian NAS per singolo servizio",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.1.p3"
+    },
+    {
+      "id": "R2.2",
+      "title": "R2.2 · Archiviazione dei file",
+      "priority": "unknown",
+      "note": "Filesystem Debian Libreria IA e futuro NAS",
+      "status": "partial",
+      "classification": "star",
+      "code": "R2.2",
+      "sourceType": "architecture-v2",
+      "parent": "R2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Filesystem Debian Libreria IA e futuro NAS",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Gestire originale/copia IA, mount e conflitti"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "R2.2.p1",
+      "title": "Storage Debian",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2"
+    },
+    {
+      "id": "R2.2.p1.m1",
+      "title": "Condivisioni e percorsi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2.p1"
+    },
+    {
+      "id": "R2.2.p1.m2",
+      "title": "Originali e copie",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2.p1"
+    },
+    {
+      "id": "R2.2.p2",
+      "title": "Integrità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2"
+    },
+    {
+      "id": "R2.2.p2.m1",
+      "title": "Disponibilità mount",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2.p2"
+    },
+    {
+      "id": "R2.2.p2.m2",
+      "title": "Conflitti e versioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R2.2.p2"
+    },
+    {
+      "id": "R2.2.p3",
+      "title": "NAS futuro",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R2.2"
+    },
+    {
+      "id": "R2.2.p3.m1",
+      "title": "Storage condiviso",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R2.2.p3"
+    },
+    {
+      "id": "R2.2.p3.m2",
+      "title": "Migrazione controllata",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R2.2.p3"
+    },
+    {
+      "id": "R3",
+      "title": "R3 · Motori IA e modelli",
+      "note": "Software e modelli eseguibili, non routing fra agenti",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R3.1",
+      "title": "R3.1 · Motori di inferenza",
+      "priority": "unknown",
+      "note": "Ollama motori audio ed embeddings locali o remoti",
+      "status": "partial",
+      "classification": "star",
+      "code": "R3.1",
+      "sourceType": "architecture-v2",
+      "parent": "R3",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Ollama in Docker disponibile; inferenze reali qwen3:0.6b e qwen3:1.7b riuscite manualmente 08/11/2026. Altri motori non verificati.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": []
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "R3.1.p1",
+      "title": "Ollama e LLM",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1"
+    },
+    {
+      "id": "R3.1.p1.m1",
+      "title": "API modelli",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p1"
+    },
+    {
+      "id": "R3.1.p1.m2",
+      "title": "Inferenza reale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p1",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Inferenza reale in Ollama Docker riuscita con qwen3:0.6b (risposta OK) e qwen3:1.7b (risposta OK in 54,457 s). Verifica limitata a questi modelli e prompt.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "R3.1.p2",
+      "title": "Trascrizione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1"
+    },
+    {
+      "id": "R3.1.p2.m1",
+      "title": "Whisper e prerequisiti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p2"
+    },
+    {
+      "id": "R3.1.p2.m2",
+      "title": "Diarizzazione opzionale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p2"
+    },
+    {
+      "id": "R3.1.p3",
+      "title": "Embeddings",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1"
+    },
+    {
+      "id": "R3.1.p3.m1",
+      "title": "Indicizzazione vettoriale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p3"
+    },
+    {
+      "id": "R3.1.p3.m2",
+      "title": "Verifica del retrieval",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.1.p3"
+    },
+    {
+      "id": "R3.2",
+      "title": "R3.2 · Modelli IA",
+      "priority": "unknown",
+      "note": "Modelli installati requisiti hardware e valutazione nuovi modelli",
+      "status": "partial",
+      "classification": "star",
+      "code": "R3.2",
+      "sourceType": "architecture-v2",
+      "parent": "R3",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Modelli installati requisiti hardware e valutazione nuovi modelli",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Benchmark ripetibili e valutazione Colibrì o alternative"
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-MODELS"
+      ]
+    },
+    {
+      "id": "R3.2.p1",
+      "title": "Catalogo",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2"
+    },
+    {
+      "id": "R3.2.p1.m1",
+      "title": "Versione e identità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2.p1"
+    },
+    {
+      "id": "R3.2.p1.m2",
+      "title": "Compatibilità RAM VRAM",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2.p1"
+    },
+    {
+      "id": "R3.2.p2",
+      "title": "Valutazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2"
+    },
+    {
+      "id": "R3.2.p2.m1",
+      "title": "Qualità e latenza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2.p2",
+      "observations": [
+        {
+          "type": "manual_followup",
+          "text": "Qwen3 1.7B ha mancato il vincolo di esattamente 15 parole nonostante lo riconoscesse; la revoca successiva ha prodotto OK. Da valutare qualità del modello/prompt; non è prova di difetto del Context Manager.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "R3.2.p2.m2",
+      "title": "Benchmark ripetibili",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R3.2.p2"
+    },
+    {
+      "id": "R3.2.p3",
+      "title": "Ricerca futura",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R3.2"
+    },
+    {
+      "id": "R3.2.p3.m1",
+      "title": "Colibrì da valutare",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R3.2.p3"
+    },
+    {
+      "id": "R3.2.p3.m2",
+      "title": "Licenze e disponibilità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R3.2.p3"
+    },
+    {
+      "id": "R4",
+      "title": "R4 · Ambiente operativo",
+      "note": "Sistema operativo, container, dipendenze e servizi host",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R4.1",
+      "title": "R4.1 · Sistema operativo e servizi host",
+      "priority": "unknown",
+      "note": "M2 avviata: tre E2E host mirati collegati via updater per Debian/permessi, systemd/updater e SSH/configurazione. Nessun restart o aggiornamento viene eseguito.",
+      "status": "present",
+      "classification": "star",
+      "code": "R4.1",
+      "sourceType": "architecture-v2",
+      "parent": "R4",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Il server Debian e i servizi host sono presenti; M2 aggiunge diagnostica host autenticata in sola lettura e tre check E2E, ancora da eseguire sul Debian installato.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Installare/aggiornare il software cora-updater host con l'endpoint /host/diagnostics",
+          "Eseguire debian_host_e2e, systemd_host_e2e e host_admin_e2e sul rilascio installato",
+          "Valutare separatamente eventuali aggiornamenti OS pendenti: il test non li installa",
+          "Solo dopo evidenza Debian collegata al commit aggiornare lo stato dei nodi coperti"
+        ]
+      },
+      "roadmapRefs": [],
+      "observations": [
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-10",
+          "text": "M2: aggiunti check live E2E R4.1. Il bridge host espone soltanto dati allowlisted: /etc/os-release, coerenza UID/GID updater, permessi file privati, dpkg --audit, apt-get -s upgrade e systemctl show per cora-updater.service/ssh.service. Nessun comando mutativo o contenuto dei log/credenziali."
+        }
+      ]
+    },
+    {
+      "id": "R4.1.p1",
+      "title": "Debian",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "M2: check host live collegato; esecuzione Debian ancora da confermare.",
+      "parent": "R4.1"
+    },
+    {
+      "id": "R4.1.p1.m1",
+      "title": "Utenti e permessi host",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p1"
+    },
+    {
+      "id": "R4.1.p1.m2",
+      "title": "Aggiornamenti OS",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p1"
+    },
+    {
+      "id": "R4.1.p2",
+      "title": "systemd",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "M2: check host live collegato; esecuzione Debian ancora da confermare.",
+      "parent": "R4.1"
+    },
+    {
+      "id": "R4.1.p2.m1",
+      "title": "Updater host",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p2"
+    },
+    {
+      "id": "R4.1.p2.m2",
+      "title": "Avvio stop e log",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p2"
+    },
+    {
+      "id": "R4.1.p3",
+      "title": "Amministrazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "M2: check host live collegato; esecuzione Debian ancora da confermare.",
+      "parent": "R4.1"
+    },
+    {
+      "id": "R4.1.p3.m1",
+      "title": "SSH",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p3"
+    },
+    {
+      "id": "R4.1.p3.m2",
+      "title": "Configurazione dei servizi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.1.p3"
+    },
+    {
+      "id": "R4.2",
+      "title": "R4.2 · Ambiente applicativo",
+      "priority": "unknown",
+      "note": "Docker Compose Python FastAPI React Vite",
+      "status": "present",
+      "classification": "star",
+      "code": "R4.2",
+      "sourceType": "architecture-v2",
+      "parent": "R4",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Docker Compose Python FastAPI React Vite",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": []
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "R4.2.p1",
+      "title": "Docker Compose",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2"
+    },
+    {
+      "id": "R4.2.p1.m1",
+      "title": "Immagini e container",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p1"
+    },
+    {
+      "id": "R4.2.p1.m2",
+      "title": "Deploy e variabili",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p1"
+    },
+    {
+      "id": "R4.2.p2",
+      "title": "Backend",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2"
+    },
+    {
+      "id": "R4.2.p2.m1",
+      "title": "Python e FastAPI",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p2"
+    },
+    {
+      "id": "R4.2.p2.m2",
+      "title": "Dipendenze e profili",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p2"
+    },
+    {
+      "id": "R4.2.p3",
+      "title": "Frontend",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2"
+    },
+    {
+      "id": "R4.2.p3.m1",
+      "title": "React Vite PWA",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p3"
+    },
+    {
+      "id": "R4.2.p3.m2",
+      "title": "Build e compatibilità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "present",
+      "note": "",
+      "parent": "R4.2.p3"
+    },
+    {
+      "id": "R5",
+      "title": "R5 · Affidabilità della base",
+      "note": "Backup, restore, aggiornamenti e rilascio sicuro",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R5.1",
+      "title": "R5.1 · Backup e ripristino",
+      "priority": "unknown",
+      "note": "Copie e procedure presenti o previste; restore completo da provare",
+      "status": "partial",
+      "classification": "star",
+      "code": "R5.1",
+      "sourceType": "architecture-v2",
+      "parent": "R5",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Copie e procedure presenti o previste; restore completo da provare",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Ripristino su ambiente vuoto e verifica copie"
+        ]
+      },
+      "roadmapRefs": [
+        "BACKUP-UPDATE"
+      ]
+    },
+    {
+      "id": "R5.1.p1",
+      "title": "Backup",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1"
+    },
+    {
+      "id": "R5.1.p1.m1",
+      "title": "Database",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1.p1"
+    },
+    {
+      "id": "R5.1.p1.m2",
+      "title": "File e configurazioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1.p1"
+    },
+    {
+      "id": "R5.1.p2",
+      "title": "Ripristino isolato",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1",
+      "knownIssues": [
+        "Non risulta un restore complessivo collaudato sul Debian"
+      ]
+    },
+    {
+      "id": "R5.1.p2.m1",
+      "title": "Database vuoto",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1.p2"
+    },
+    {
+      "id": "R5.1.p2.m2",
+      "title": "Verifica dati e hash",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.1.p2"
+    },
+    {
+      "id": "R5.1.p3",
+      "title": "NAS futuro",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R5.1"
+    },
+    {
+      "id": "R5.1.p3.m1",
+      "title": "Politica copie",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R5.1.p3"
+    },
+    {
+      "id": "R5.1.p3.m2",
+      "title": "Frequenza e retention",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R5.1.p3"
+    },
+    {
+      "id": "R5.2",
+      "title": "R5.2 · Aggiornamenti e rilasci",
+      "priority": "unknown",
+      "note": "Updater Cora presente; aggiornamenti Immich Nextcloud lavoro W2",
+      "status": "partial",
+      "classification": "star",
+      "code": "R5.2",
+      "sourceType": "architecture-v2",
+      "parent": "R5",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Updater Cora presente; aggiornamenti Immich Nextcloud lavoro W2",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "W2 aggiornamenti Immich/Nextcloud con backup e post-test"
+        ]
+      },
+      "roadmapRefs": [
+        "BACKUP-UPDATE"
+      ],
+      "observations": [
+        {
+          "text": "Aggiornamenti di Cora riferiti funzionanti; aggiornamenti app esterne non inclusi.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "R5.2.p1",
+      "title": "Updater Cora",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2"
+    },
+    {
+      "id": "R5.2.p1.m1",
+      "title": "Commit e deploy",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p1"
+    },
+    {
+      "id": "R5.2.p1.m2",
+      "title": "Rollback",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p1"
+    },
+    {
+      "id": "R5.2.p2",
+      "title": "CI e verifica",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2"
+    },
+    {
+      "id": "R5.2.p2.m1",
+      "title": "Test codice",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p2"
+    },
+    {
+      "id": "R5.2.p2.m2",
+      "title": "Collaudo versione Debian",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p2"
+    },
+    {
+      "id": "R5.2.p3",
+      "title": "App esterne",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2"
+    },
+    {
+      "id": "R5.2.p3.m1",
+      "title": "Immich e Nextcloud",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p3",
+      "knownIssues": [
+        "L'updater host non gestisce ancora Immich/Nextcloud"
+      ]
+    },
+    {
+      "id": "R5.2.p3.m2",
+      "title": "Backup conferma e health finale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R5.2.p3"
+    },
+    {
+      "id": "R6",
+      "title": "R6 · Sicurezza",
+      "note": "Rete privata, identità, credenziali e Permission Engine",
+      "priority": "unknown",
+      "parent": "radici",
+      "earlierNote": "Schema V2 parziale. Inventario e confini da validare nella repository e sul server.",
+      "classification": "area"
+    },
+    {
+      "id": "R6.1",
+      "title": "R6.1 · Rete privata identità credenziali",
+      "priority": "unknown",
+      "note": "Tailscale e accessi privati non equivalgono ai permessi dell’applicazione",
+      "status": "partial",
+      "classification": "star",
+      "code": "R6.1",
+      "sourceType": "architecture-v2",
+      "parent": "R6",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Tailscale e accessi privati non equivalgono ai permessi dell’applicazione",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Identità verificata per agenti installati su nuovi nodi"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "R6.1.p1",
+      "title": "Tailscale",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1"
+    },
+    {
+      "id": "R6.1.p1.m1",
+      "title": "Accesso remoto",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1.p1"
+    },
+    {
+      "id": "R6.1.p1.m2",
+      "title": "Connessione tra nodi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1.p1"
+    },
+    {
+      "id": "R6.1.p2",
+      "title": "Identità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1"
+    },
+    {
+      "id": "R6.1.p2.m1",
+      "title": "Account e dispositivi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1.p2"
+    },
+    {
+      "id": "R6.1.p2.m2",
+      "title": "Chiavi e segreti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.1.p2"
+    },
+    {
+      "id": "R6.1.p3",
+      "title": "Futuro trust",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "R6.1"
+    },
+    {
+      "id": "R6.1.p3.m1",
+      "title": "Identità per agente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R6.1.p3"
+    },
+    {
+      "id": "R6.1.p3.m2",
+      "title": "Revoca e rotazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "R6.1.p3"
+    },
+    {
+      "id": "R6.2",
+      "title": "R6.2 · Permessi e autorizzazioni",
+      "priority": "unknown",
+      "note": "Permission Engine indipendente dal modello e approvazioni esplicite",
+      "status": "partial",
+      "classification": "star",
+      "code": "R6.2",
+      "sourceType": "architecture-v2",
+      "parent": "R6",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Permission Engine indipendente dal modello e approvazioni esplicite",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Policy per agente remoto, minimo privilegio, revoca"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "R6.2.p1",
+      "title": "Permission Engine",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2"
+    },
+    {
+      "id": "R6.2.p1.m1",
+      "title": "Automatico richiesta bloccato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p1"
+    },
+    {
+      "id": "R6.2.p1.m2",
+      "title": "Regole deterministiche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p1"
+    },
+    {
+      "id": "R6.2.p2",
+      "title": "Ambito",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2"
+    },
+    {
+      "id": "R6.2.p2.m1",
+      "title": "Tool e agente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p2"
+    },
+    {
+      "id": "R6.2.p2.m2",
+      "title": "File database dispositivo",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p2"
+    },
+    {
+      "id": "R6.2.p3",
+      "title": "Audit e revoca",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2"
+    },
+    {
+      "id": "R6.2.p3.m1",
+      "title": "Operazioni con effetti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p3"
+    },
+    {
+      "id": "R6.2.p3.m2",
+      "title": "Revocare accessi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "R6.2.p3"
+    },
+    {
+      "id": "tronco",
+      "role": "tronco",
+      "title": "Tronco comune",
+      "note": "Capacità generali scelte per progetto. L’appartenenza resta stabile anche quando solo un ramo le usa.",
+      "priority": "unknown"
+    },
+    {
+      "id": "T1",
+      "title": "T1 · Supervisor e orchestrazione",
+      "note": "Supervisor LangGraph e router shadow; base V1 completata, router specializzato ancora non autorevole",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T1",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Supervisor LangGraph e router shadow; base V1 completata, router specializzato ancora non autorevole",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Validare il router shadow prima di affidargli decisioni reali",
+          "Fase 2: Context Manager progressivo, Plan persistente, scheduler/failover multi-worker",
+          "Evoluzioni progressive senza autonomia non autorizzata",
+          "Router shadow non autorevole: valutarne l'adozione futura solo dopo una prova dedicata; non è un guasto del percorso diretto."
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-ORCHESTRATOR"
+      ]
+    },
+    {
+      "id": "T1.p1",
+      "title": "Supervisor",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T1"
+    },
+    {
+      "id": "T1.p1.m1",
+      "title": "Ingresso richieste",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p1",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Richiesta Chat → LangGraph → Supervisor → risposta conclusa (run 33193329, route direct, qwen3:1.7b, 127,89 s). Non certifica la delega agli specialisti.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ],
+      "knownIssues": [
+        "Run diretto qwen3:1.7b completato ma lento (127,89 s), contro 54,46 s per prompt diverso in Ollama CLI; causa non isolata e confronti non omogenei."
+      ]
+    },
+    {
+      "id": "T1.p1.m2",
+      "title": "Delega a specialisti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p1",
+      "observations": [
+        {
+          "type": "manual_followup",
+          "text": "Delega reale agli specialisti non verificata nei run direct osservati; collaudo successivo prima di colorare verde la delega.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T1.p2",
+      "title": "Router shadow",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T1"
+    },
+    {
+      "id": "T1.p2.m1",
+      "title": "Routing proposto non autorevole",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p2"
+    },
+    {
+      "id": "T1.p2.m2",
+      "title": "Escalation verificabile",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p2"
+    },
+    {
+      "id": "T1.p3",
+      "title": "Larva v0",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T1"
+    },
+    {
+      "id": "T1.p3.m1",
+      "title": "Osservatore deterministico",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p3"
+    },
+    {
+      "id": "T1.p3.m2",
+      "title": "Niente azioni autonome",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T1.p3"
+    },
+    {
+      "id": "T2",
+      "title": "T2 · Capability Registry e strumenti",
+      "note": "Unico registro delle capacità e contratti di tool",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T2",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Unico registro delle capacità e contratti di tool",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Associazione affidabile tra richiesta, tool e capability autorizzata"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "T2.p1",
+      "title": "Capability Registry",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T2"
+    },
+    {
+      "id": "T2.p1.m1",
+      "title": "Tool realmente esposti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p1"
+    },
+    {
+      "id": "T2.p1.m2",
+      "title": "Identità e descrizioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p1"
+    },
+    {
+      "id": "T2.p2",
+      "title": "Contratti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T2"
+    },
+    {
+      "id": "T2.p2.m1",
+      "title": "Parametri e errori",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p2"
+    },
+    {
+      "id": "T2.p2.m2",
+      "title": "Permessi richiesti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p2"
+    },
+    {
+      "id": "T2.p3",
+      "title": "Collegamenti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T2"
+    },
+    {
+      "id": "T2.p3.m1",
+      "title": "Agente chiama tool corretto",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p3"
+    },
+    {
+      "id": "T2.p3.m2",
+      "title": "Errori di delega",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T2.p3"
+    },
+    {
+      "id": "T3",
+      "title": "T3 · System Coordinator",
+      "note": "Coordinamento proprietà e stato dei componenti oggi read-only",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T3",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Coordinamento proprietà e stato dei componenti oggi read-only",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Coordinator leggibile e coerente anche con più nodi"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "T3.p1",
+      "title": "Ownership",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T3"
+    },
+    {
+      "id": "T3.p1.m1",
+      "title": "Responsabilità dei moduli",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p1"
+    },
+    {
+      "id": "T3.p1.m2",
+      "title": "Nessuno stato duplicato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p1"
+    },
+    {
+      "id": "T3.p2",
+      "title": "Panoramica",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T3"
+    },
+    {
+      "id": "T3.p2.m1",
+      "title": "Coordinator osserva",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p2"
+    },
+    {
+      "id": "T3.p2.m2",
+      "title": "Stato servizi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p2"
+    },
+    {
+      "id": "T3.p3",
+      "title": "Evoluzioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T3"
+    },
+    {
+      "id": "T3.p3.m1",
+      "title": "Integrazioni distribuite",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p3"
+    },
+    {
+      "id": "T3.p3.m2",
+      "title": "Nuovi componenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T3.p3"
+    },
+    {
+      "id": "T4",
+      "title": "T4 · Runtime e State Machine",
+      "note": "Esecuzioni stati transizioni e controllo degli effetti",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T4",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Esecuzioni stati transizioni e controllo degli effetti",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Operazioni idempotenti, retry e recupero errori"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "T4.p1",
+      "title": "Runtime persistente",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T4"
+    },
+    {
+      "id": "T4.p1.m1",
+      "title": "Identità run",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p1"
+    },
+    {
+      "id": "T4.p1.m2",
+      "title": "Risultati e revisioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p1"
+    },
+    {
+      "id": "T4.p2",
+      "title": "State Machine",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T4"
+    },
+    {
+      "id": "T4.p2.m1",
+      "title": "Transizioni lecite",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p2"
+    },
+    {
+      "id": "T4.p2.m2",
+      "title": "Annullamento e ripresa",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p2"
+    },
+    {
+      "id": "T4.p3",
+      "title": "Effetti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T4"
+    },
+    {
+      "id": "T4.p3.m1",
+      "title": "Retry idempotente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p3"
+    },
+    {
+      "id": "T4.p3.m2",
+      "title": "Stato incerto mai ripetuto ciecamente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T4.p3"
+    },
+    {
+      "id": "T5",
+      "title": "T5 · Event Bus e Component Bus",
+      "note": "Messaggi eventi e collegamenti tipizzati nel processo",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T5",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Messaggi eventi e collegamenti tipizzati nel processo",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Futuro Event Bus distribuito tra nodi"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "T5.p1",
+      "title": "Event Bus",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T5"
+    },
+    {
+      "id": "T5.p1.m1",
+      "title": "Eventi e sottoscrizioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T5.p1"
+    },
+    {
+      "id": "T5.p1.m2",
+      "title": "Origine timestamp",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T5.p1"
+    },
+    {
+      "id": "T5.p2",
+      "title": "Component Bus",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T5"
+    },
+    {
+      "id": "T5.p2.m1",
+      "title": "Messaggi tipizzati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T5.p2"
+    },
+    {
+      "id": "T5.p2.m2",
+      "title": "Risposta al destinatario",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T5.p2"
+    },
+    {
+      "id": "T5.p3",
+      "title": "Futuro distribuito",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "T5"
+    },
+    {
+      "id": "T5.p3.m1",
+      "title": "Bus tra nodi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T5.p3"
+    },
+    {
+      "id": "T5.p3.m2",
+      "title": "Disconnessioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T5.p3"
+    },
+    {
+      "id": "T6",
+      "title": "T6 · Context Manager",
+      "note": "Contratti ContextRequest ContextPacket; retrieval progressivo non completo",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T6",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Run 33193329 produce budget/turni di contesto; cronologia e revoca di vincolo osservate, ma qualità del contesto non interamente verificata.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Context Manager progressivo e differenza letterale/rielaborato",
+          "Completare in futuro il Context Manager progressivo e i controlli di qualità della cronologia: non è un errore dimostrato dalle prove odierne."
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-ORCHESTRATOR"
+      ]
+    },
+    {
+      "id": "T6.p1",
+      "title": "Contratti di contesto",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T6"
+    },
+    {
+      "id": "T6.p1.m1",
+      "title": "Richiesta e pacchetto",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p1"
+    },
+    {
+      "id": "T6.p1.m2",
+      "title": "Budget",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p1",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Evento context.selected osservato nel run 33193329: input_budget 7040, estimated_tokens 834, dropped_turns 0. Verificata la produzione delle metriche, non la qualità di selezione del contesto.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T6.p2",
+      "title": "Selezione progressiva",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T6"
+    },
+    {
+      "id": "T6.p2.m1",
+      "title": "Recupero rilevante",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p2",
+      "observations": [
+        {
+          "type": "manual_followup",
+          "text": "Cronologia e annullamento di una regola precedente osservati nella chat; il rispetto di un vincolo numerico non è riuscito. Qualità della selezione e precedenza dei ruoli ancora da collaudare.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T6.p2.m2",
+      "title": "Escalation",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p2"
+    },
+    {
+      "id": "T6.p3",
+      "title": "Letterale e rielaborato",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T6"
+    },
+    {
+      "id": "T6.p3.m1",
+      "title": "Fonte originale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p3"
+    },
+    {
+      "id": "T6.p3.m2",
+      "title": "Interpretazione distinta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T6.p3"
+    },
+    {
+      "id": "T7",
+      "title": "T7 · Memoria",
+      "note": "Quattro livelli e revisioni ancora da collaudare nell’uso",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T7",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Quattro livelli e revisioni ancora da collaudare nell’uso",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Consolidamento governato; Mente saggia/Custode solo idea"
+        ]
+      },
+      "knownIssues": [
+        "Memoria non ancora collaudata completamente nell'uso reale dopo i cambiamenti"
+      ],
+      "roadmapRefs": [
+        "RUNTIME-MEMORY",
+        "CONTEXT-REGISTRY"
+      ]
+    },
+    {
+      "id": "T7.p1",
+      "title": "Permanente",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T7"
+    },
+    {
+      "id": "T7.p1.m1",
+      "title": "Identità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p1"
+    },
+    {
+      "id": "T7.p1.m2",
+      "title": "Revisione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p1"
+    },
+    {
+      "id": "T7.p2",
+      "title": "Semantica",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T7"
+    },
+    {
+      "id": "T7.p2.m1",
+      "title": "Conoscenza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p2"
+    },
+    {
+      "id": "T7.p2.m2",
+      "title": "Provenienza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p2"
+    },
+    {
+      "id": "T7.p3",
+      "title": "Episodica",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T7"
+    },
+    {
+      "id": "T7.p3.m1",
+      "title": "Eventi e passaggi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p3"
+    },
+    {
+      "id": "T7.p3.m2",
+      "title": "Collegamento ai run",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p3"
+    },
+    {
+      "id": "T7.p4",
+      "title": "Di lavoro",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T7"
+    },
+    {
+      "id": "T7.p4.m1",
+      "title": "Task correnti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p4"
+    },
+    {
+      "id": "T7.p4.m2",
+      "title": "Scadenza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T7.p4"
+    },
+    {
+      "id": "T7.p5",
+      "title": "Custodia futura",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "T7"
+    },
+    {
+      "id": "T7.p5.m1",
+      "title": "Mente saggia o Custode idea",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T7.p5"
+    },
+    {
+      "id": "T7.p5.m2",
+      "title": "Versionamento governato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T7.p5"
+    },
+    {
+      "id": "T8",
+      "title": "T8 · Registro e configurazione degli agenti",
+      "note": "Ruoli strumenti modelli e configurazione agenti",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T8",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Nelle prove manuali del 08/11/2026, assegnazione agente salvata/riletta e modello effettivamente riportato corrispondente, sia locale sia per worker 123.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Identità del modello effettivamente utilizzato in ogni agente",
+          "Estendere ad altri agenti e worker i controlli sull'identità del modello; nei due casi osservati il modello corrispondeva."
+        ]
+      },
+      "roadmapRefs": [
+        "MODELS-WORKER"
+      ]
+    },
+    {
+      "id": "T8.p1",
+      "title": "Registro agenti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T8"
+    },
+    {
+      "id": "T8.p1.m1",
+      "title": "Ruolo e capability",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p1"
+    },
+    {
+      "id": "T8.p1.m2",
+      "title": "Specialisti presenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p1"
+    },
+    {
+      "id": "T8.p2",
+      "title": "Modello per agente",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T8"
+    },
+    {
+      "id": "T8.p2.m1",
+      "title": "Selezione e salvataggio",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p2",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Da Architettura l'assegnazione qwen3:4b su Ollama di Cora è stata salvata e riletta. Il test del modello ha restituito qwen3:4b.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T8.p2.m2",
+      "title": "Profilo worker",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p2",
+      "observations": [
+        {
+          "type": "manual_followup",
+          "text": "Fallback a modello standard quando l'assegnazione è incompleta: rendere esplicita la scelta automatica e verificarne il perimetro; se un worker specifico è offline non sostituirlo con Ollama locale.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T8.p3",
+      "title": "Verifica effettiva",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T8"
+    },
+    {
+      "id": "T8.p3.m1",
+      "title": "Modello eseguito",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p3",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Run 33193329: richiesto e riportato qwen3:1.7b. Run remoto 08/11 ore 18:42:59: richiesto e riportato qwen3-coder:30b-a3b-q4_K_M. Corrispondenza osservata in questi due casi.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T8.p3.m2",
+      "title": "Macchina usata",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T8.p3",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Run remoto del 08/11 ore 18:42:59: macchina riportata 2619fc4a-accf-4267-a19b-1a7f18db9d36, associata al worker 123. Non è una misura diretta dell'utilizzo GPU.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "T9 · Planner e pianificazione task",
+      "note": "Plan multi step code persistenti scheduler failover fase 2",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T9",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Schema e persistenza dei piani presenti nel codice (core/plans.py); orchestrazione multi-step, scheduler e ripresa non dimostrati.",
+          "source": "code-review-2026-11-09",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Plan multi-step persistente, code e scheduler multi-worker"
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-ORCHESTRATOR"
+      ],
+      "observations": [
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-09",
+          "text": "core/plans.py definisce create_plan_record() con task e dipendenze e save_plan_record() su JSON; non è prova di scheduling, ripresa o funzionamento sul Debian."
+        }
+      ]
+    },
+    {
+      "id": "T9.p1",
+      "title": "Plan",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T9",
+      "observations": [
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-09",
+          "text": "core/plans.py definisce create_plan_record() con task e dipendenze e save_plan_record() su JSON; non è prova di scheduling, ripresa o funzionamento sul Debian."
+        }
+      ]
+    },
+    {
+      "id": "T9.p1.m1",
+      "title": "Multi step strutturato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T9.p1",
+      "observations": [
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-09",
+          "text": "core/plans.py definisce create_plan_record() con task e dipendenze e save_plan_record() su JSON; non è prova di scheduling, ripresa o funzionamento sul Debian."
+        }
+      ]
+    },
+    {
+      "id": "T9.p1.m2",
+      "title": "Persistenza e ripresa",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T9.p1"
+    },
+    {
+      "id": "T9.p2",
+      "title": "Code e priorità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "T9",
+      "knownIssues": [
+        "Code persistenti e scheduling multi-worker general-purpose non implementati"
+      ]
+    },
+    {
+      "id": "T9.p2.m1",
+      "title": "Limiti e concorrenza",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T9.p2"
+    },
+    {
+      "id": "T9.p2.m2",
+      "title": "Nessun effetto doppio",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T9.p2"
+    },
+    {
+      "id": "T9.p3",
+      "title": "Scheduling",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "T9"
+    },
+    {
+      "id": "T9.p3.m1",
+      "title": "Worker spento o acceso",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T9.p3"
+    },
+    {
+      "id": "T9.p3.m2",
+      "title": "Failover controllato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "T9.p3"
+    },
+    {
+      "id": "T10",
+      "title": "T10 · Tracciabilità ed errori",
+      "note": "Attività, trace e decisioni standard presenti; diagnosi causale avanzata resta fase 2",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T10",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Run, stati, identità di modello/macchina e durate delle prove del 08/11/2026 tracciati; diagnosi causale cross-component non ancora disponibile.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Tracciare hop e causa di guasti introdotti da modifiche in altri componenti",
+          "Diagnostica causale cross-component da sviluppare; le trace dei run osservati risultano disponibili."
+        ]
+      },
+      "roadmapRefs": [
+        "ARCH-ORCHESTRATOR",
+        "AUTO-QUALITY"
+      ]
+    },
+    {
+      "id": "T10.p1",
+      "title": "Run e trace",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T10"
+    },
+    {
+      "id": "T10.p1.m1",
+      "title": "Richiesta verso risposta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p1",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Attività registra run 33193329 dalla richiesta alla risposta, con stati queued/running/completed e tracce supervisor; per worker remoto registra run completato e identità provider.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T10.p1.m2",
+      "title": "Correlazione degli hop",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p1"
+    },
+    {
+      "id": "T10.p2",
+      "title": "Causa errore",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T10"
+    },
+    {
+      "id": "T10.p2.m1",
+      "title": "Individuare primo passaggio fallito",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p2"
+    },
+    {
+      "id": "T10.p2.m2",
+      "title": "Timeout fallback",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p2"
+    },
+    {
+      "id": "T10.p3",
+      "title": "Prestazioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T10"
+    },
+    {
+      "id": "T10.p3.m1",
+      "title": "Tempi per fase",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p3",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Diagnostica osservata: 127,66 s inferenza locale, 127,89 s run; 30,11 s inferenza remota, 30,35 s run, con coda e modello. Valori per fase, non una validazione completa della correttezza dei contatori.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "T10.p3.m2",
+      "title": "Regressioni tra versioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T10.p3"
+    },
+    {
+      "id": "T11",
+      "title": "T11 · Registro unico test e salute",
+      "note": "Catalogo salute + inventario repository + provenienza evidenze collegati. Nuovi E2E reali limitati ai punti prioritari del foglio problemi.xlsx.",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T11",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "T11 ha catalogo unico, inventario completo dei test di repository, runner canonico e regressioni per commit/ambiente/persistenza delle evidenze; esecuzione sul Debian ancora da confermare.",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Eseguire sul Debian test_inventory_regression ed evidence_provenance_regression e registrare commit/ambiente",
+          "Usare T11 come registro dei nuovi E2E mirati di M2 (R4.1)",
+          "Creare nuovi E2E reali solo per i punti prioritari selezionati in problemi.xlsx"
+        ]
+      },
+      "roadmapRefs": [
+        "AUTO-QUALITY"
+      ],
+      "observations": [
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-10",
+          "text": "T11 espone ora un inventario di tutti i moduli test_*.py, distingue quelli collegati al runner da quelli solo presenti in repository e applica un guardrail: nuovi check live E2E possono essere aggiunti solo ai nodi prioritari del foglio problemi.xlsx. Nessun nuovo E2E reale è stato dichiarato passato."
+        },
+        {
+          "type": "code_review",
+          "observedAt": "2026-11-10",
+          "text": "Rifinitura finale T11: test già esistenti su identità del rilascio, separazione sintetico/reale, persistenza del progresso e recupero dopo interruzione sono ora collegati al runner come evidence_provenance_regression. Nessun nuovo E2E reale introdotto."
+        }
+      ]
+    },
+    {
+      "id": "T11.p1",
+      "title": "Catalogo unico",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T11"
+    },
+    {
+      "id": "T11.p1.m1",
+      "title": "ID test e componenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p1"
+    },
+    {
+      "id": "T11.p1.m2",
+      "title": "Nessun monitor duplicato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p1"
+    },
+    {
+      "id": "T11.p2",
+      "title": "Test sicuri",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T11"
+    },
+    {
+      "id": "T11.p2.m1",
+      "title": "Preflight e contratti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p2"
+    },
+    {
+      "id": "T11.p2.m2",
+      "title": "Sintetici E2E isolati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p2",
+      "knownIssues": [
+        "Test tecnici non equivalgono a E2E, import CI/updater nel registro non completo"
+      ]
+    },
+    {
+      "id": "T11.p3",
+      "title": "Storico",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T11"
+    },
+    {
+      "id": "T11.p3.m1",
+      "title": "Ambiente e commit",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p3"
+    },
+    {
+      "id": "T11.p3.m2",
+      "title": "Stato dopo riavvio",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p3"
+    },
+    {
+      "id": "T11.p4",
+      "title": "Regressioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T11"
+    },
+    {
+      "id": "T11.p4.m1",
+      "title": "Chat orchestratore agente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p4"
+    },
+    {
+      "id": "T11.p4.m2",
+      "title": "Audio Word Calendar worker",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T11.p4"
+    },
+    {
+      "id": "T12",
+      "title": "T12 · Interfaccia comune Cora",
+      "note": "Home navigazione Impostazioni Architettura Attività e PWA",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T12",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Home navigazione Impostazioni Architettura Attività e PWA",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "PWA, Home e accesso ad Atlas"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "T12.p1",
+      "title": "Home e roadmap",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T12"
+    },
+    {
+      "id": "T12.p1.m1",
+      "title": "W1 W2 W3",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p1"
+    },
+    {
+      "id": "T12.p1.m2",
+      "title": "Obiettivi M1 M4",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p1"
+    },
+    {
+      "id": "T12.p2",
+      "title": "Architettura Impostazioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T12"
+    },
+    {
+      "id": "T12.p2.m1",
+      "title": "Modelli e agenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p2"
+    },
+    {
+      "id": "T12.p2.m2",
+      "title": "Gestione Memoria",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p2"
+    },
+    {
+      "id": "T12.p3",
+      "title": "PWA",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T12"
+    },
+    {
+      "id": "T12.p3.m1",
+      "title": "Telefono e notifiche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p3"
+    },
+    {
+      "id": "T12.p3.m2",
+      "title": "Aggiorna Cora",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p3"
+    },
+    {
+      "id": "T12.p4",
+      "title": "Attività",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T12"
+    },
+    {
+      "id": "T12.p4.m1",
+      "title": "Collegamento a trace",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p4"
+    },
+    {
+      "id": "T12.p4.m2",
+      "title": "Errori",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T12.p4"
+    },
+    {
+      "id": "T13",
+      "title": "T13 · Motore comune automazioni",
+      "note": "Editor e validazione; esecutore generico da realizzare",
+      "priority": "unknown",
+      "parent": "tronco",
+      "earlierNote": "Proposta V2 parziale. Responsabilità, evidenze e collegamenti da confermare.",
+      "status": "partial",
+      "classification": "star",
+      "code": "T13",
+      "sourceType": "architecture-v2",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Editor e validazione; esecutore generico da realizzare",
+          "source": "architecture-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Esecuzione reale del workflow dopo editor/validazione"
+        ]
+      },
+      "roadmapRefs": [
+        "AUTO-EXEC"
+      ]
+    },
+    {
+      "id": "T13.p1",
+      "title": "Bozze grafiche",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T13"
+    },
+    {
+      "id": "T13.p1.m1",
+      "title": "Editor",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p1"
+    },
+    {
+      "id": "T13.p1.m2",
+      "title": "Validazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p1"
+    },
+    {
+      "id": "T13.p2",
+      "title": "Esecutore",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T13"
+    },
+    {
+      "id": "T13.p2.m1",
+      "title": "Tool con permessi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p2"
+    },
+    {
+      "id": "T13.p2.m2",
+      "title": "Annullamento",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p2"
+    },
+    {
+      "id": "T13.p3",
+      "title": "Trigger",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "T13"
+    },
+    {
+      "id": "T13.p3.m1",
+      "title": "Pianificazione periodica",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p3"
+    },
+    {
+      "id": "T13.p3.m2",
+      "title": "Condizioni ed eventi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "T13.p3"
+    },
+    {
+      "id": "A",
+      "title": "A · Conversazione",
+      "note": "Chat e sessioni di dialogo",
+      "priority": "unknown",
+      "role": "ramo",
+      "earlierNote": "Articolazione parziale da approfondire.",
+      "code": "A",
+      "classification": "branch"
+    },
+    {
+      "id": "A1",
+      "title": "A1 · Chat e interazione",
+      "note": "Ingresso utente e risposta Cora con strumenti e deleghe",
+      "priority": "unknown",
+      "parent": "A",
+      "earlierNote": "Parziale · Interazione principale con Cora.",
+      "code": "A1",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T1",
+        "T2",
+        "T8",
+        "T10"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Ingresso utente e risposta Cora con strumenti e deleghe",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Verifica reale richiesta Chat → Supervisor → specialista → risposta"
+        ]
+      },
+      "knownIssues": [
+        "Regressioni possibili Chat → supervisor → agente → risposta"
+      ],
+      "roadmapRefs": [
+        "RUNTIME-MEMORY"
+      ]
+    },
+    {
+      "id": "A1.p1",
+      "title": "Conversazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A1"
+    },
+    {
+      "id": "A1.p1.m1",
+      "title": "Inviare richieste",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p1"
+    },
+    {
+      "id": "A1.p1.m2",
+      "title": "Ricevere risposte",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p1"
+    },
+    {
+      "id": "A1.p1.m3",
+      "title": "Gestire errori",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p1"
+    },
+    {
+      "id": "A1.p2",
+      "title": "Strumenti della chat",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A1"
+    },
+    {
+      "id": "A1.p2.m1",
+      "title": "Allegati e tool",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p2"
+    },
+    {
+      "id": "A1.p2.m2",
+      "title": "Deleghe agli specialisti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p2"
+    },
+    {
+      "id": "A1.p3",
+      "title": "Risposta verificabile",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A1"
+    },
+    {
+      "id": "A1.p3.m1",
+      "title": "Chat supervisor agente modello risposta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p3"
+    },
+    {
+      "id": "A1.p3.m2",
+      "title": "Streaming annullamento timeout",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A1.p3"
+    },
+    {
+      "id": "A2",
+      "title": "A2 · Conversazioni e sessioni",
+      "note": "Cronologia thread transcript e continuità",
+      "priority": "unknown",
+      "parent": "A",
+      "earlierNote": "Parziale · Continuità delle conversazioni.",
+      "code": "A2",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T6",
+        "T7",
+        "T12"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Cronologia thread transcript e continuità",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Persistenza chat e recupero durante i riavvii"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "A2.p1",
+      "title": "Cronologia",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A2"
+    },
+    {
+      "id": "A2.p1.m1",
+      "title": "Elenco conversazioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p1"
+    },
+    {
+      "id": "A2.p1.m2",
+      "title": "Riapertura sessioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p1"
+    },
+    {
+      "id": "A2.p2",
+      "title": "Identità thread",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A2"
+    },
+    {
+      "id": "A2.p2.m1",
+      "title": "Persistenza e ricerca",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p2"
+    },
+    {
+      "id": "A2.p2.m2",
+      "title": "Versioni transcript",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p2"
+    },
+    {
+      "id": "A2.p3",
+      "title": "Continuità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "A2"
+    },
+    {
+      "id": "A2.p3.m1",
+      "title": "Contesto e memoria",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p3"
+    },
+    {
+      "id": "A2.p3.m2",
+      "title": "Rimozione autorizzata",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "A2.p3"
+    },
+    {
+      "id": "B",
+      "title": "B · File documenti e conoscenza",
+      "note": "File Libreria IA documenti e lettura",
+      "priority": "unknown",
+      "role": "ramo",
+      "earlierNote": "Articolazione parziale da approfondire.",
+      "code": "B",
+      "classification": "branch"
+    },
+    {
+      "id": "B1",
+      "title": "B1 · Gestione file",
+      "note": "File server e NAS consultabili modificabili con permessi",
+      "priority": "unknown",
+      "parent": "B",
+      "earlierNote": "Parziale · Accesso e modifica dei file.",
+      "code": "B1",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11",
+        "T12"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "File server e NAS consultabili modificabili con permessi",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Accesso controllato ai file del Debian e al futuro NAS"
+        ]
+      },
+      "roadmapRefs": [
+        "FILES-PHOTOS"
+      ]
+    },
+    {
+      "id": "B1.p1",
+      "title": "Esplorazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B1"
+    },
+    {
+      "id": "B1.p1.m1",
+      "title": "Directory e ricerca",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p1"
+    },
+    {
+      "id": "B1.p1.m2",
+      "title": "Anteprime",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p1"
+    },
+    {
+      "id": "B1.p2",
+      "title": "Operazioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B1"
+    },
+    {
+      "id": "B1.p2.m1",
+      "title": "Leggere e scaricare",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p2"
+    },
+    {
+      "id": "B1.p2.m2",
+      "title": "Modificare rinominare ed eliminare con conferma",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p2"
+    },
+    {
+      "id": "B1.p3",
+      "title": "Risorse distribuite",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B1"
+    },
+    {
+      "id": "B1.p3.m1",
+      "title": "NAS e mount",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p3"
+    },
+    {
+      "id": "B1.p3.m2",
+      "title": "Controllo conflitti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B1.p3"
+    },
+    {
+      "id": "B2",
+      "title": "B2 · Libreria IA e Local Reader",
+      "note": "Copie IA recupero fonti e lettura documenti",
+      "priority": "unknown",
+      "parent": "B",
+      "earlierNote": "Parziale · Riferimenti e copie per gli agenti.",
+      "code": "B2",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T6",
+        "T7",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Copie IA recupero fonti e lettura documenti",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Sincronizzazione sicura copie IA e migliore valutazione fonti"
+        ]
+      },
+      "roadmapRefs": [
+        "FILES-ADVANCED"
+      ]
+    },
+    {
+      "id": "B2.p1",
+      "title": "Libreria",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B2"
+    },
+    {
+      "id": "B2.p1.m1",
+      "title": "Copia e originale separati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p1"
+    },
+    {
+      "id": "B2.p1.m2",
+      "title": "Indicizzazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p1"
+    },
+    {
+      "id": "B2.p2",
+      "title": "Local Reader",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B2"
+    },
+    {
+      "id": "B2.p2.m1",
+      "title": "Ricerca e fonti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p2"
+    },
+    {
+      "id": "B2.p2.m2",
+      "title": "Rilevanza e attendibilità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p2"
+    },
+    {
+      "id": "B2.p3",
+      "title": "Sincronizzazione copie",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B2"
+    },
+    {
+      "id": "B2.p3.m1",
+      "title": "Controllo modifiche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p3"
+    },
+    {
+      "id": "B2.p3.m2",
+      "title": "Conflitti e versioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B2.p3"
+    },
+    {
+      "id": "B3",
+      "title": "B3 · Gestione documentale",
+      "note": "Word PDF e OCR futuro",
+      "priority": "unknown",
+      "parent": "B",
+      "earlierNote": "Parziale · Esempio: appunti cliente in Word.",
+      "code": "B3",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Word PDF e OCR futuro",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "OCR PDF scansionati e prove reali su copie Word"
+        ]
+      },
+      "roadmapRefs": [
+        "DOCUMENTS-OCR"
+      ]
+    },
+    {
+      "id": "B3.p1",
+      "title": "Word DOCX",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B3"
+    },
+    {
+      "id": "B3.p1.m1",
+      "title": "Lettura e modifica protetta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p1"
+    },
+    {
+      "id": "B3.p1.m2",
+      "title": "Proposte su copia con backup",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p1",
+      "knownIssues": [
+        "Scrittura Word su documento di prova autentico ancora da collaudare"
+      ]
+    },
+    {
+      "id": "B3.p2",
+      "title": "PDF",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B3"
+    },
+    {
+      "id": "B3.p2.m1",
+      "title": "Lettura e generazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p2"
+    },
+    {
+      "id": "B3.p2.m2",
+      "title": "Validazione del documento",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p2"
+    },
+    {
+      "id": "B3.p3",
+      "title": "OCR futuro",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "B3"
+    },
+    {
+      "id": "B3.p3.m1",
+      "title": "PDF scansionati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "B3.p3"
+    },
+    {
+      "id": "B3.p3.m2",
+      "title": "Formati avanzati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "B3.p3"
+    },
+    {
+      "id": "B3.p4",
+      "title": "Versioni",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "B3"
+    },
+    {
+      "id": "B3.p4.m1",
+      "title": "Hash e conflitti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p4"
+    },
+    {
+      "id": "B3.p4.m2",
+      "title": "Ripristino",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "B3.p4"
+    },
+    {
+      "id": "C",
+      "title": "C · Comunicazione e organizzazione",
+      "note": "Calendario email audio e appunti",
+      "priority": "unknown",
+      "role": "ramo",
+      "earlierNote": "Articolazione parziale da approfondire.",
+      "code": "C",
+      "classification": "branch"
+    },
+    {
+      "id": "C1",
+      "title": "C1 · Calendario",
+      "note": "Caso guida: dichiarare appuntamento vederlo una sola volta e ricevere notifica telefonica",
+      "priority": "unknown",
+      "parent": "C",
+      "earlierNote": "Parziale · Caso guida: dire un appuntamento, registrarlo una sola volta e ricevere il promemoria sul telefono.",
+      "code": "C1",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T8",
+        "T11",
+        "T12"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Caso guida: dichiarare appuntamento vederlo una sola volta e ricevere notifica telefonica",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Collaudo evento creato una sola volta e notifica consegnata",
+          "Idea futura: organizzazione settimana con IA",
+          "Idea futura: calendario digitale in camera via API"
+        ]
+      },
+      "roadmapRefs": [
+        "CALENDAR-MAIL"
+      ],
+      "observations": [
+        {
+          "text": "Calendario manuale e notifiche riferiti funzionanti; percorso agentico da provare.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "C1a",
+      "title": "Interpretare la richiesta",
+      "note": "",
+      "priority": "unknown",
+      "parent": "C1",
+      "classification": "planet",
+      "status": "partial"
+    },
+    {
+      "id": "C1a.m1",
+      "title": "Lingua naturale e proposta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1a"
+    },
+    {
+      "id": "C1a.m2",
+      "title": "Data ora cliente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1a"
+    },
+    {
+      "id": "C1b",
+      "title": "Registrare o modificare evento",
+      "note": "",
+      "priority": "unknown",
+      "parent": "C1",
+      "classification": "planet",
+      "status": "partial"
+    },
+    {
+      "id": "C1b.m1",
+      "title": "Approvazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1b"
+    },
+    {
+      "id": "C1b.m2",
+      "title": "Idempotenza e duplicati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1b",
+      "knownIssues": [
+        "Rischio duplicazione appuntamenti da sync/audio e retry"
+      ]
+    },
+    {
+      "id": "C1c",
+      "title": "Consegnare notifica",
+      "note": "",
+      "priority": "unknown",
+      "parent": "C1",
+      "classification": "planet",
+      "status": "partial"
+    },
+    {
+      "id": "C1c.m1",
+      "title": "PWA e telefono",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1c"
+    },
+    {
+      "id": "C1c.m2",
+      "title": "Verifica ricezione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1c"
+    },
+    {
+      "id": "C1d",
+      "title": "Riorganizzare la settimana con IA",
+      "note": "Possibilità discussa, non impegno realizzato",
+      "priority": "unknown",
+      "parent": "C1",
+      "earlierNote": "Idea futura discussa; nessun impegno o stato verificato.",
+      "classification": "planet",
+      "status": "idea"
+    },
+    {
+      "id": "C1d.m1",
+      "title": "Proposta di pianificazione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "idea",
+      "note": "",
+      "parent": "C1d"
+    },
+    {
+      "id": "C1d.m2",
+      "title": "Conferma prima di modificare",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "idea",
+      "note": "",
+      "parent": "C1d"
+    },
+    {
+      "id": "C1e",
+      "title": "Calendario digitale in camera via API",
+      "note": "Possibilità discussa, non impegno realizzato",
+      "priority": "unknown",
+      "parent": "C1",
+      "earlierNote": "Idea futura discussa; nessun impegno o stato verificato.",
+      "classification": "planet",
+      "status": "idea"
+    },
+    {
+      "id": "C1e.m1",
+      "title": "Schermo e dispositivo futuro",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "idea",
+      "note": "",
+      "parent": "C1e"
+    },
+    {
+      "id": "C1e.m2",
+      "title": "Integrazione da decidere",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "idea",
+      "note": "",
+      "parent": "C1e"
+    },
+    {
+      "id": "C1.p6",
+      "title": "Sincronizzazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C1"
+    },
+    {
+      "id": "C1.p6.m1",
+      "title": "Google e Cora",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1.p6"
+    },
+    {
+      "id": "C1.p6.m2",
+      "title": "Log esportazioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C1.p6"
+    },
+    {
+      "id": "C2",
+      "title": "C2 · Email e agente Mail",
+      "note": "Gmail strumenti ricerca lettura bozze presenti; flusso reale non provato",
+      "priority": "unknown",
+      "parent": "C",
+      "earlierNote": "Parziale · Comunicazione e preventivi.",
+      "code": "C2",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T8",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Gmail strumenti ricerca lettura bozze presenti; flusso reale non provato",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Verificare Gmail reale e azioni con approvazione"
+        ]
+      },
+      "roadmapRefs": [
+        "CALENDAR-MAIL"
+      ]
+    },
+    {
+      "id": "C2.p1",
+      "title": "Accesso Gmail",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C2",
+      "knownIssues": [
+        "Gmail: esistono tool ma integrazione account e flussi non collaudati"
+      ]
+    },
+    {
+      "id": "C2.p1.m1",
+      "title": "Autorizzazione account",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p1"
+    },
+    {
+      "id": "C2.p1.m2",
+      "title": "Ricerca e lettura",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p1"
+    },
+    {
+      "id": "C2.p2",
+      "title": "Riepiloghi e bozze",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C2"
+    },
+    {
+      "id": "C2.p2.m1",
+      "title": "Riassunto giornaliero",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p2"
+    },
+    {
+      "id": "C2.p2.m2",
+      "title": "Composizione messaggi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p2"
+    },
+    {
+      "id": "C2.p3",
+      "title": "Invio approvato",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C2"
+    },
+    {
+      "id": "C2.p3.m1",
+      "title": "Destinatari verificati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p3"
+    },
+    {
+      "id": "C2.p3.m2",
+      "title": "Conferma esplicita",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p3"
+    },
+    {
+      "id": "C2.p4",
+      "title": "Connessioni commerciali",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C2"
+    },
+    {
+      "id": "C2.p4.m1",
+      "title": "CRM clienti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p4"
+    },
+    {
+      "id": "C2.p4.m2",
+      "title": "Preventivi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C2.p4"
+    },
+    {
+      "id": "C3",
+      "title": "C3 · Audio e agente Audio",
+      "note": "Caricamento e trascrizione riferiti funzionanti; Word reale da collaudare",
+      "priority": "unknown",
+      "parent": "C",
+      "earlierNote": "Parziale · Caso guida: da conversazione a trascrizione e appunto utilizzabile.",
+      "code": "C3",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T6",
+        "T8",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Caricamento e trascrizione riferiti funzionanti; Word reale da collaudare",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Collaudare scrittura Word dopo trascrizione e approvazione",
+          "Futuro aggiornamento scheda cliente"
+        ]
+      },
+      "roadmapRefs": [
+        "AUDIO-WORD"
+      ],
+      "observations": [
+        {
+          "text": "Trascrizione Audio riferita funzionante; Word finale non verificato.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "C3.p1",
+      "title": "Acquisizione audio",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C3"
+    },
+    {
+      "id": "C3.p1.m1",
+      "title": "Telefono e PC",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p1"
+    },
+    {
+      "id": "C3.p1.m2",
+      "title": "Data e interlocutori",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p1"
+    },
+    {
+      "id": "C3.p2",
+      "title": "Trascrizione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C3"
+    },
+    {
+      "id": "C3.p2.m1",
+      "title": "Whisper e correzioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p2"
+    },
+    {
+      "id": "C3.p2.m2",
+      "title": "Diarizzazione opzionale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p2"
+    },
+    {
+      "id": "C3.p3",
+      "title": "Appunti strutturati",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C3"
+    },
+    {
+      "id": "C3.p3.m1",
+      "title": "Riepilogo cliente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p3"
+    },
+    {
+      "id": "C3.p3.m2",
+      "title": "Proposte azioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p3"
+    },
+    {
+      "id": "C3.p4",
+      "title": "Pubblicazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "C3"
+    },
+    {
+      "id": "C3.p4.m1",
+      "title": "Approvazione Word su copia",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "C3.p4",
+      "knownIssues": [
+        "Pubblicazione Word approvata non ancora collaudata end-to-end"
+      ]
+    },
+    {
+      "id": "C3.p4.m2",
+      "title": "Future schede cliente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "C3.p4"
+    },
+    {
+      "id": "programmi",
+      "role": "ramo",
+      "title": "D · Programmi esterni e autonomi",
+      "note": "Immich Nextcloud Magazzino Tele Preventivi e CodeAtlas come stelle autonome e parallele. Il loro codice può appartenere ad altre repository.",
+      "earlierNote": "D · Programmi esterni. Stelle parallele. Eventuali biforcazioni dipendono dall’importanza nel progetto.",
+      "priority": "unknown",
+      "code": "D",
+      "classification": "branch"
+    },
+    {
+      "id": "immich",
+      "parent": "programmi",
+      "title": "D1 · Immich",
+      "priority": "unknown",
+      "code": "D1",
+      "classification": "star",
+      "status": "partial",
+      "note": "Archivio fotografie già usato; agenti e aggiornamenti da completare",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Archivio fotografie già usato; agenti e aggiornamenti da completare",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "W2 integrazione aggiornamenti protetti",
+          "Connettore agentico lettura foto"
+        ]
+      },
+      "roadmapRefs": [
+        "FILES-PHOTOS"
+      ],
+      "observations": [
+        {
+          "text": "Funzionamento Immich confermato dall'utente; non certifica l'integrazione con gli agenti.",
+          "type": "owner_report",
+          "commit": null,
+          "observedAt": null
+        }
+      ]
+    },
+    {
+      "id": "immich.p1",
+      "title": "Foto e archivio",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "immich"
+    },
+    {
+      "id": "immich.p1.m1",
+      "title": "Memoria foto originali",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p1"
+    },
+    {
+      "id": "immich.p1.m2",
+      "title": "Accesso mobile",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p1"
+    },
+    {
+      "id": "immich.p2",
+      "title": "Integrazione agentica",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "immich"
+    },
+    {
+      "id": "immich.p2.m1",
+      "title": "Ricerca autorizzata",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p2",
+      "knownIssues": [
+        "Mancano connettore Cora e updater host dedicato"
+      ]
+    },
+    {
+      "id": "immich.p2.m2",
+      "title": "Nessuna duplicazione degli originali",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p2"
+    },
+    {
+      "id": "immich.p3",
+      "title": "Aggiornamenti W2",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "immich"
+    },
+    {
+      "id": "immich.p3.m1",
+      "title": "Versione e backup",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p3"
+    },
+    {
+      "id": "immich.p3.m2",
+      "title": "Conferma e test finale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "immich.p3"
+    },
+    {
+      "id": "nextcloud",
+      "parent": "programmi",
+      "title": "D2 · Nextcloud",
+      "priority": "unknown",
+      "code": "D2",
+      "classification": "star",
+      "status": "partial",
+      "note": "Cloud condiviso presente; collegamento File e aggiornamenti da perfezionare",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Cloud condiviso presente; collegamento File e aggiornamenti da perfezionare",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "W2 integrazione aggiornamenti protetti",
+          "Connettere client e pagina File con agenti"
+        ]
+      },
+      "roadmapRefs": [
+        "FILES-PHOTOS"
+      ]
+    },
+    {
+      "id": "nextcloud.p1",
+      "title": "File cloud",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud"
+    },
+    {
+      "id": "nextcloud.p1.m1",
+      "title": "Accesso da telefono e desktop",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p1"
+    },
+    {
+      "id": "nextcloud.p1.m2",
+      "title": "Condivisione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p1"
+    },
+    {
+      "id": "nextcloud.p2",
+      "title": "Sincronizzazione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud"
+    },
+    {
+      "id": "nextcloud.p2.m1",
+      "title": "Client e conflitti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p2"
+    },
+    {
+      "id": "nextcloud.p2.m2",
+      "title": "Collegamento pagina File",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p2",
+      "knownIssues": [
+        "Mancano integrazioni complete e updater host dedicato"
+      ]
+    },
+    {
+      "id": "nextcloud.p3",
+      "title": "Agenti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud"
+    },
+    {
+      "id": "nextcloud.p3.m1",
+      "title": "Tool autorizzati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p3"
+    },
+    {
+      "id": "nextcloud.p3.m2",
+      "title": "Accesso corretto ai file",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p3"
+    },
+    {
+      "id": "nextcloud.p4",
+      "title": "Aggiornamenti W2",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud"
+    },
+    {
+      "id": "nextcloud.p4.m1",
+      "title": "Backup versione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p4"
+    },
+    {
+      "id": "nextcloud.p4.m2",
+      "title": "Verifica successiva",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "nextcloud.p4"
+    },
+    {
+      "id": "magazzino",
+      "parent": "programmi",
+      "title": "D3 · Magazzino Tele",
+      "priority": "unknown",
+      "code": "D3",
+      "classification": "star",
+      "status": "partial",
+      "note": "App esterna con bridge Cora e import da verificare",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "App esterna con bridge Cora e import da verificare",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Verifica dati importati e bridge con Cora"
+        ]
+      },
+      "roadmapRefs": [
+        "WORK-APPS"
+      ]
+    },
+    {
+      "id": "magazzino.p1",
+      "title": "Articoli e disponibilità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino"
+    },
+    {
+      "id": "magazzino.p1.m1",
+      "title": "Magazzino e movimenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p1"
+    },
+    {
+      "id": "magazzino.p1.m2",
+      "title": "Anagrafiche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p1"
+    },
+    {
+      "id": "magazzino.p2",
+      "title": "Ordini e import",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino"
+    },
+    {
+      "id": "magazzino.p2.m1",
+      "title": "Excel e righe",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p2"
+    },
+    {
+      "id": "magazzino.p2.m2",
+      "title": "Duplicati e dati mancanti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p2"
+    },
+    {
+      "id": "magazzino.p3",
+      "title": "Accesso Cora",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino"
+    },
+    {
+      "id": "magazzino.p3.m1",
+      "title": "Bridge e permessi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p3"
+    },
+    {
+      "id": "magazzino.p3.m2",
+      "title": "Test del servizio esterno",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "magazzino.p3"
+    },
+    {
+      "id": "D4",
+      "title": "D4 · Preventivi",
+      "note": "Programma esterno per preventivi PDF collegamento Cora ancora incompleto",
+      "priority": "unknown",
+      "parent": "programmi",
+      "earlierNote": "Proposta parziale nella famiglia dei programmi esterni; integrazione da verificare.",
+      "code": "D4",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Programma esterno per preventivi PDF collegamento Cora ancora incompleto",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Controllo PDF e interazione con database clienti"
+        ]
+      },
+      "roadmapRefs": [
+        "WORK-APPS"
+      ]
+    },
+    {
+      "id": "D4.p1",
+      "title": "Preparazione preventivi",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D4"
+    },
+    {
+      "id": "D4.p1.m1",
+      "title": "Prodotti e listini",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p1"
+    },
+    {
+      "id": "D4.p1.m2",
+      "title": "Prezzi e revisioni",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p1"
+    },
+    {
+      "id": "D4.p2",
+      "title": "PDF",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D4"
+    },
+    {
+      "id": "D4.p2.m1",
+      "title": "Documento di prova",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p2"
+    },
+    {
+      "id": "D4.p2.m2",
+      "title": "Generazione controllata",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p2"
+    },
+    {
+      "id": "D4.p3",
+      "title": "Interoperabilità",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D4"
+    },
+    {
+      "id": "D4.p3.m1",
+      "title": "Database clienti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p3"
+    },
+    {
+      "id": "D4.p3.m2",
+      "title": "Email con invio approvato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D4.p3"
+    },
+    {
+      "id": "D5",
+      "title": "D5 · CodeAtlas",
+      "note": "Programma indipendente per vedere struttura codice e direzione Cora",
+      "priority": "unknown",
+      "parent": "programmi",
+      "earlierNote": "Proposta parziale nella famiglia dei programmi esterni; integrazione da verificare.",
+      "code": "D5",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T10",
+        "T11",
+        "T12"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Programma indipendente per vedere struttura codice e direzione Cora",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Integrazione in Home Cora e mappa 2D della Direzione",
+          "Associazione semiautomatica test/commit per stella"
+        ]
+      },
+      "roadmapRefs": []
+    },
+    {
+      "id": "D5.p1",
+      "title": "Analisi repository",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D5"
+    },
+    {
+      "id": "D5.p1.m1",
+      "title": "File moduli e dipendenze",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p1"
+    },
+    {
+      "id": "D5.p1.m2",
+      "title": "Sei viste tecniche",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p1"
+    },
+    {
+      "id": "D5.p2",
+      "title": "Pianta concettuale",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D5"
+    },
+    {
+      "id": "D5.p2.m1",
+      "title": "Radici tronco rami stelle pianeti lune",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p2",
+      "knownIssues": [
+        "Direzione Cora ancora prevalentemente vista testuale; mappa 2D e provenienza per stella da integrare"
+      ]
+    },
+    {
+      "id": "D5.p2.m2",
+      "title": "Classificazione semiautomatica con conferma",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p2"
+    },
+    {
+      "id": "D5.p3",
+      "title": "Evidenze e storia",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D5"
+    },
+    {
+      "id": "D5.p3.m1",
+      "title": "Commits e problemi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p3"
+    },
+    {
+      "id": "D5.p3.m2",
+      "title": "Test ed esiti di provenienza distinta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p3"
+    },
+    {
+      "id": "D5.p4",
+      "title": "Integrazione Serveria",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "D5"
+    },
+    {
+      "id": "D5.p4.m1",
+      "title": "Link da Home",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p4"
+    },
+    {
+      "id": "D5.p4.m2",
+      "title": "Versionamento della pianta",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "D5.p4"
+    },
+    {
+      "id": "E",
+      "title": "E · Clienti e lavoro commerciale",
+      "note": "Dal CRM M3 alle capacità agentiche M4",
+      "priority": "unknown",
+      "role": "ramo",
+      "earlierNote": "Articolazione parziale da approfondire.",
+      "code": "E",
+      "classification": "branch"
+    },
+    {
+      "id": "E1",
+      "title": "E1 · Anagrafica clienti e CRM",
+      "note": "M3: database unico e schede clienti collegando SQL aziendale e Word",
+      "priority": "unknown",
+      "parent": "E",
+      "earlierNote": "Parziale · Placeholder: organizzare note e dati nel database clienti.",
+      "code": "E1",
+      "classification": "star",
+      "status": "planned",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T6",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "M3: database unico e schede clienti collegando SQL aziendale e Word",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "M3 schede cliente strutturate, database aziendale fonte autorevole da verificare"
+        ]
+      },
+      "roadmapRefs": [
+        "CUSTOMER-REGISTRY"
+      ]
+    },
+    {
+      "id": "E1.p1",
+      "title": "Archivio strutturato",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E1"
+    },
+    {
+      "id": "E1.p1.m1",
+      "title": "Identità contatti stabilimenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p1"
+    },
+    {
+      "id": "E1.p1.m2",
+      "title": "Storico commerciale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p1"
+    },
+    {
+      "id": "E1.p2",
+      "title": "Riuso SQL aziendale",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E1"
+    },
+    {
+      "id": "E1.p2.m1",
+      "title": "Schema e chiavi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p2"
+    },
+    {
+      "id": "E1.p2.m2",
+      "title": "Fonte autorevole e deduplica",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p2",
+      "knownIssues": [
+        "Database SQL aziendale non censito come fonte autorevole, rischio duplicati"
+      ]
+    },
+    {
+      "id": "E1.p3",
+      "title": "Schede cliente",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E1"
+    },
+    {
+      "id": "E1.p3.m1",
+      "title": "Appuntamenti note documenti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p3"
+    },
+    {
+      "id": "E1.p3.m2",
+      "title": "Preventivi e attività",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p3"
+    },
+    {
+      "id": "E1.p4",
+      "title": "Transizione Word",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E1"
+    },
+    {
+      "id": "E1.p4.m1",
+      "title": "Conservare gli originali",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p4"
+    },
+    {
+      "id": "E1.p4.m2",
+      "title": "Import progressivo verificato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E1.p4"
+    },
+    {
+      "id": "E2",
+      "title": "E2 · Assistente commerciale",
+      "note": "M4: workflow email preventivi cliente con autorizzazioni",
+      "priority": "unknown",
+      "parent": "E",
+      "earlierNote": "Parziale · Placeholder: definizione e confini da confermare.",
+      "code": "E2",
+      "classification": "star",
+      "status": "planned",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T1",
+        "T2",
+        "T9",
+        "T13"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "M4: workflow email preventivi cliente con autorizzazioni",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "M4 richiesta email → preventivo → PDF → approvazione"
+        ]
+      },
+      "roadmapRefs": [
+        "AUTO-QUOTES"
+      ]
+    },
+    {
+      "id": "E2.p1",
+      "title": "Gestione richieste",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E2"
+    },
+    {
+      "id": "E2.p1.m1",
+      "title": "Associare email audio clienti",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p1"
+    },
+    {
+      "id": "E2.p1.m2",
+      "title": "Proposta attività",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p1"
+    },
+    {
+      "id": "E2.p2",
+      "title": "Preventivo assistito",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E2"
+    },
+    {
+      "id": "E2.p2.m1",
+      "title": "Email PDF e revisione",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p2"
+    },
+    {
+      "id": "E2.p2.m2",
+      "title": "Invio autorizzato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p2"
+    },
+    {
+      "id": "E2.p3",
+      "title": "Follow up",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "E2"
+    },
+    {
+      "id": "E2.p3.m1",
+      "title": "Promemoria e richiami",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p3"
+    },
+    {
+      "id": "E2.p3.m2",
+      "title": "Aggiornamento schede",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "E2.p3"
+    },
+    {
+      "id": "macchine",
+      "role": "ramo",
+      "title": "F · Lavoro distribuito",
+      "note": "Worker GPU distinti da agenti operativi installati sui dispositivi.",
+      "earlierNote": "F · Lavoro distribuito. Ricostruzione parziale; una sola stella Worker con pianeti.",
+      "priority": "unknown",
+      "code": "F",
+      "classification": "branch"
+    },
+    {
+      "id": "worker",
+      "parent": "macchine",
+      "title": "F1 · Worker IA e collaborazione macchine",
+      "priority": "unknown",
+      "code": "F1",
+      "classification": "star",
+      "status": "partial",
+      "note": "Una stella per lavorare con più GPU; inferenza provata, routing da attestare",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T1",
+        "T8",
+        "T9",
+        "T10"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Worker 123 ha completato inferenza remota col modello richiesto il 08/11/2026; il test a worker disattivato ha restituito HTTP 502, non un OK locale.",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Verificare macchina e modello effettivi; routing",
+          "Scheduler e failover controllati",
+          "Estendere la prova di identità modello/macchina ad altri agenti; sistemare messaggio HTTP 502 con worker disabilitato, verificando assenza di inferenza locale inattesa."
+        ]
+      },
+      "roadmapRefs": [
+        "MODELS-WORKER"
+      ]
+    },
+    {
+      "id": "installare",
+      "parent": "worker",
+      "title": "Collegare un worker su un altro dispositivo",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": ""
+    },
+    {
+      "id": "installare.m1",
+      "title": "Registrazione identità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "installare"
+    },
+    {
+      "id": "installare.m2",
+      "title": "Stato connesso",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "installare",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "Il worker 123 ha completato una chiamata remota il 08/11; l'identità della macchina è presente nella traccia. Disponibilità attestata solo all'ora della prova.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "assegnare",
+      "parent": "worker",
+      "title": "Assegnare lavoro ai worker",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": ""
+    },
+    {
+      "id": "assegnare.m1",
+      "title": "Scelta macchina e modello",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "assegnare",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "L'assegnazione a worker 123 e modello qwen3-coder:30b-a3b-q4_K_M è stata salvata e riletta nella scheda Cora centrale; test successivo concluso.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "assegnare.m2",
+      "title": "Verifica modello effettivo",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "assegnare",
+      "observations": [
+        {
+          "type": "manual_pass",
+          "text": "La traccia provider del run remoto riporta stesso modello richiesto/eseguito e macchina identificata; corrispondenza sì. Non certifica assenza di carico locale durante l'inferenza.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "worker.p3",
+      "title": "Modelli e limiti",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "worker"
+    },
+    {
+      "id": "worker.p3.m1",
+      "title": "Profili VRAM e tempo",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "worker.p3"
+    },
+    {
+      "id": "worker.p3.m2",
+      "title": "Risorse abilitate dall utente",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "worker.p3"
+    },
+    {
+      "id": "worker.p4",
+      "title": "Scheduler multi worker",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "worker"
+    },
+    {
+      "id": "worker.p4.m1",
+      "title": "Code priorità",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "worker.p4"
+    },
+    {
+      "id": "worker.p4.m2",
+      "title": "Offline fallback controllato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "worker.p4",
+      "observations": [
+        {
+          "type": "manual_followup",
+          "text": "Con worker 123 disattivato, il pulsante di test ha restituito HTTP 502: nessuna risposta utile ottenuta. Da rifinire con messaggio esplicito 'worker offline'; resta da escludere con tracing/CPU campionata un fallback locale silenzioso in ogni percorso.",
+          "observedAt": "2026-11-08",
+          "commit": null
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "title": "F2 · Agenti operativi sui dispositivi",
+      "priority": "unknown",
+      "code": "F2",
+      "classification": "star",
+      "status": "planned",
+      "note": "M4: distribuzione di agenti capaci di usare strumenti locali con permessi minimi",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T2",
+        "T4",
+        "T8",
+        "T10"
+      ],
+      "parent": "macchine",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "M4: distribuzione di agenti capaci di usare strumenti locali con permessi minimi",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "M4 installare agenti operativi sul laptop con permessi locali",
+          "Import SQL clienti read-only, staging e approvazione"
+        ]
+      },
+      "roadmapRefs": [
+        "REMOTE-AGENTS"
+      ]
+    },
+    {
+      "id": "F2.p1",
+      "title": "Deploy verificato",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "F2"
+    },
+    {
+      "id": "F2.p1.m1",
+      "title": "Installare runtime fidato",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p1"
+    },
+    {
+      "id": "F2.p1.m2",
+      "title": "Aggiornare revocare rimuovere",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p1"
+    },
+    {
+      "id": "F2.p2",
+      "title": "Tool locali",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "F2"
+    },
+    {
+      "id": "F2.p2.m1",
+      "title": "Allowlist file cartelle e database",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p2"
+    },
+    {
+      "id": "F2.p2.m2",
+      "title": "Credenziali restano sul laptop",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p2"
+    },
+    {
+      "id": "F2.p3",
+      "title": "SQL clienti dal laptop",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "F2"
+    },
+    {
+      "id": "F2.p3.m1",
+      "title": "Lettura sola lettura",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p3"
+    },
+    {
+      "id": "F2.p3.m2",
+      "title": "Staging e approvazione import",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p3"
+    },
+    {
+      "id": "F2.p4",
+      "title": "Audit",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "planned",
+      "note": "",
+      "parent": "F2"
+    },
+    {
+      "id": "F2.p4.m1",
+      "title": "Trace e log",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p4"
+    },
+    {
+      "id": "F2.p4.m2",
+      "title": "Bloccare controllo generale",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "planned",
+      "note": "",
+      "parent": "F2.p4",
+      "knownIssues": [
+        "Un agente operativo non deve avere controllo generale del laptop"
+      ]
+    },
+    {
+      "id": "G",
+      "title": "G · Agente programmatore",
+      "note": "Ramo riservato al Programmatore e alle sue evoluzioni",
+      "priority": "unknown",
+      "role": "ramo",
+      "earlierNote": "Articolazione parziale da approfondire.",
+      "code": "G",
+      "classification": "branch"
+    },
+    {
+      "id": "G1",
+      "title": "G1 · Agente programmatore",
+      "note": "Programmatore con tool e workflow controllati; lavoro W3 dopo aggiornamenti",
+      "priority": "unknown",
+      "parent": "G",
+      "earlierNote": "Parziale · G è riservato al programmatore. Distinguere strumenti presenti, collaudo e uso operativo.",
+      "code": "G1",
+      "classification": "star",
+      "status": "partial",
+      "sourceType": "conceptual-v2",
+      "trunkLinks": [
+        "T1",
+        "T2",
+        "T9",
+        "T10",
+        "T11"
+      ],
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Programmatore con tool e workflow controllati; lavoro W3 dopo aggiornamenti",
+          "source": "conceptual-v2",
+          "runtimeVerified": false
+        },
+        "future": [
+          "W3 ripresa agente programmatore dopo aggiornamenti e hardware",
+          "Possibile futuro collegamento ad Atlas"
+        ]
+      },
+      "roadmapRefs": [
+        "PROGRAMMER"
+      ]
+    },
+    {
+      "id": "G1.p1",
+      "title": "Comprensione repository",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "G1"
+    },
+    {
+      "id": "G1.p1.m1",
+      "title": "Ricerca file e analisi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p1"
+    },
+    {
+      "id": "G1.p1.m2",
+      "title": "Dipendenze e obiettivi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p1"
+    },
+    {
+      "id": "G1.p2",
+      "title": "Modifiche controllate",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "G1"
+    },
+    {
+      "id": "G1.p2.m1",
+      "title": "Creare e modificare file",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p2"
+    },
+    {
+      "id": "G1.p2.m2",
+      "title": "Branch commit revert rollback",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p2"
+    },
+    {
+      "id": "G1.p3",
+      "title": "Verifiche",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "G1",
+      "knownIssues": [
+        "Verifica su modello potente e tool reali rinviata alla ripresa W3"
+      ]
+    },
+    {
+      "id": "G1.p3.m1",
+      "title": "Test autorizzati",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p3"
+    },
+    {
+      "id": "G1.p3.m2",
+      "title": "Regressioni e report",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p3"
+    },
+    {
+      "id": "G1.p4",
+      "title": "Espansione",
+      "priority": "unknown",
+      "classification": "planet",
+      "status": "partial",
+      "note": "",
+      "parent": "G1"
+    },
+    {
+      "id": "G1.p4.m1",
+      "title": "Più repository e dispositivi",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p4"
+    },
+    {
+      "id": "G1.p4.m2",
+      "title": "Collegamento Atlas",
+      "priority": "unknown",
+      "classification": "moon",
+      "status": "partial",
+      "note": "",
+      "parent": "G1.p4"
+    },
+    {
+      "id": "T14",
+      "title": "T14 · Approvazioni ed effetti autorizzati",
+      "parent": "tronco",
+      "classification": "star",
+      "status": "planned",
+      "priority": "unknown",
+      "note": "Responsabilità futura trasversale per richieste di approvazione, decisioni esplicite e applicazione degli effetti; non certifica un approval engine operativo.",
+      "timeline": {
+        "past": [],
+        "present": {
+          "statement": "Responsabilità proposta, da integrare con permessi, capability e runtime; nessuna approvazione end-to-end certificata.",
+          "source": "architecture-v3",
+          "runtimeVerified": false
+        },
+        "future": [
+          "Flusso comune richiesta → approvazione → esecuzione autorizzata",
+          "Tracciamento, scadenza e revoca delle approvazioni"
+        ]
+      }
+    },
+    {
+      "id": "T14.p1",
+      "title": "Ciclo di approvazione",
+      "parent": "T14",
+      "classification": "planet",
+      "status": "planned",
+      "priority": "unknown",
+      "note": "Richieste, decisioni e scadenze condivise"
+    },
+    {
+      "id": "T14.p1.m1",
+      "title": "Richiesta e consenso esplicito",
+      "parent": "T14.p1",
+      "classification": "moon",
+      "status": "planned",
+      "priority": "unknown"
+    },
+    {
+      "id": "T14.p1.m2",
+      "title": "Scadenza e revoca",
+      "parent": "T14.p1",
+      "classification": "moon",
+      "status": "planned",
+      "priority": "unknown"
+    },
+    {
+      "id": "T14.p2",
+      "title": "Applicazione della decisione",
+      "parent": "T14",
+      "classification": "planet",
+      "status": "planned",
+      "priority": "unknown",
+      "note": "Collegamento tra permessi, capability ed effetti"
+    },
+    {
+      "id": "T14.p2.m1",
+      "title": "Controllo prima dell'effetto",
+      "parent": "T14.p2",
+      "classification": "moon",
+      "status": "planned",
+      "priority": "unknown"
+    },
+    {
+      "id": "T14.p2.m2",
+      "title": "Audit della decisione",
+      "parent": "T14.p2",
+      "classification": "moon",
+      "status": "planned",
+      "priority": "unknown"
+    }
+  ],
+  "revision_note": "V2 completa, 45 stelle con pianeti e lune; colori dichiarati e non dedotti dal codice, test o priorità. Conservate identità del piano iniziale e contributi docs/MEMORIA_CORA.md. | ServerIA autorevole; qwe legacy. Criticità localizzate sui nodi operativi e relazioni semantiche esplicite (proposte, non prove runtime).",
+  "revision": "CORA-V3-2026-11-10-M2-R4-HOST-E2E",
+  "legend": {
+    "unknown": "Da valutare",
+    "ok": "Tutto ok",
+    "plan": "Aggiornamento previsto",
+    "minor": "Problema minore",
+    "problem": "Problema"
+  },
+  "sourceContext": [
+    "docs/MEMORIA_CORA.md",
+    "docs/CORA_MAPPA_V2_COMPLETA.md",
+    "Aleselva12/serveria1:docs/project-status.json"
+  ],
+  "nextWork": [
+    "W1 Orchestratore V1: completato 04/11/2026",
+    "W2 Aggiornamenti Immich Nextcloud: prossimo lavoro",
+    "W3 Agente programmatore"
+  ],
+  "relations": [
+    {
+      "from": "A1",
+      "to": "T1",
+      "kind": "uses",
+      "note": "Chat → supervisor → agente → risposta",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "A1",
+      "to": "T2",
+      "kind": "uses",
+      "note": "Tool autorizzati e deleghe",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "A1",
+      "to": "T10",
+      "kind": "uses",
+      "note": "Diagnosi causa errore",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "A2",
+      "to": "T7",
+      "kind": "uses",
+      "note": "Storia della chat distinta dalla memoria di Cora",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "B1",
+      "to": "R2.2",
+      "kind": "depends_on",
+      "note": "Filesystem e mount dati",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "B2",
+      "to": "T6",
+      "kind": "uses",
+      "note": "Recupero del contesto",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "B3",
+      "to": "B1",
+      "kind": "uses",
+      "note": "Accesso sicuro ai file",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C1",
+      "to": "T2",
+      "kind": "uses",
+      "note": "Tool calendario",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C1",
+      "to": "C3",
+      "kind": "communicates_with",
+      "note": "Proposte appuntamenti da audio",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C1",
+      "to": "E1",
+      "kind": "communicates_with",
+      "note": "Associare appuntamenti cliente",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C2",
+      "to": "E1",
+      "kind": "communicates_with",
+      "note": "Email cliente",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C2",
+      "to": "D4",
+      "kind": "communicates_with",
+      "note": "Invio preventivo",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C3",
+      "to": "B3",
+      "kind": "uses",
+      "note": "Scrittura appunti Word",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "C3",
+      "to": "E1",
+      "kind": "produces_for",
+      "note": "Appunti CRM futuro",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "immich",
+      "to": "R2.2",
+      "kind": "depends_on",
+      "note": "Storage foto",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "nextcloud",
+      "to": "B1",
+      "kind": "communicates_with",
+      "note": "Pagina File e cloud",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "nextcloud",
+      "to": "R2.2",
+      "kind": "depends_on",
+      "note": "Dati persistenti",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "magazzino",
+      "to": "E1",
+      "kind": "communicates_with",
+      "note": "Anagrafiche clienti senza doppioni",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "D4",
+      "to": "E1",
+      "kind": "uses",
+      "note": "Preventivo da cliente autorevole",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "E2",
+      "to": "E1",
+      "kind": "uses",
+      "note": "Assistente commerciale usa CRM",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "E2",
+      "to": "C2",
+      "kind": "uses",
+      "note": "Bozze ed email",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "E2",
+      "to": "D4",
+      "kind": "uses",
+      "note": "PDF generati da Preventivi",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "worker",
+      "to": "R1.2",
+      "kind": "depends_on",
+      "note": "GPU desktop disponibile",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "worker",
+      "to": "R1.3",
+      "kind": "depends_on",
+      "note": "GPU laptop disponibile",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "worker",
+      "to": "T9",
+      "kind": "uses",
+      "note": "Coda e scheduling",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "F2",
+      "to": "R6.2",
+      "kind": "depends_on",
+      "note": "Permessi locali e revoca",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "F2",
+      "to": "E1",
+      "kind": "produces_for",
+      "note": "Import SQL clienti approvato",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "G1",
+      "to": "T11",
+      "kind": "uses",
+      "note": "Test condivisi",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "G1",
+      "to": "D5",
+      "kind": "communicates_with",
+      "note": "Atlas e analisi impatto",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "D5",
+      "to": "T10",
+      "kind": "uses",
+      "note": "Tracce e diagnostica",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "D5",
+      "to": "T11",
+      "kind": "uses",
+      "note": "Import esiti con provenienza",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "R5.2",
+      "to": "T11",
+      "kind": "uses",
+      "note": "CI e prove deploy",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "T1",
+      "to": "R6.2",
+      "kind": "depends_on",
+      "note": "Autorizzazioni indipendenti dai modelli",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "T8",
+      "to": "R3.2",
+      "kind": "depends_on",
+      "note": "Modello presente e identificabile",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "T9",
+      "to": "T4",
+      "kind": "uses",
+      "note": "Piano eseguito dal runtime",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "T11",
+      "to": "T10",
+      "kind": "communicates_with",
+      "note": "Regressione e causa",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "T12",
+      "to": "D5",
+      "kind": "communicates_with",
+      "note": "Collegamento Home Atlas",
+      "status": "proposed",
+      "provenance": "conceptual-v2"
+    },
+    {
+      "from": "A1.p3.m1",
+      "to": "T11.p4.m1",
+      "kind": "verified_by",
+      "note": "Il controllo chat_e2e è condiviso: una prova di percorso non certifica tutti i passaggi",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "A1.p2.m2",
+      "to": "T2.p3.m1",
+      "kind": "shares_evidence_with",
+      "note": "chat_e2e è associato a entrambi; i risultati non costituiscono due verifiche indipendenti",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "B3.p2.m1",
+      "to": "B3.p2.m2",
+      "kind": "shares_evidence_with",
+      "note": "preventivi_e2e copre più nodi con un solo esito",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T2.p2.m2",
+      "to": "R6.2.p1",
+      "kind": "depends_on",
+      "note": "I contratti dei tool richiedono decisioni deterministiche del Permission Engine",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T9.p1",
+      "to": "T4.p1",
+      "kind": "uses",
+      "note": "Il piano è distinto dal runtime che registra le esecuzioni; persistenza di ripresa da verificare",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T9.p3",
+      "to": "worker.p4",
+      "kind": "depends_on",
+      "note": "Lo scheduling del piano dipende dall'assegnazione ai worker; implementazioni non equivalenti",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "worker.p4",
+      "to": "T4.p2",
+      "kind": "uses",
+      "note": "L'assegnazione del lavoro e le transizioni del run hanno responsabilità diverse",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "R1.2.p2",
+      "to": "worker",
+      "kind": "produces_for",
+      "note": "Il desktop è una risorsa; F1 gestisce la capacità di calcolo remota",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "R1.3.p2",
+      "to": "worker",
+      "kind": "produces_for",
+      "note": "Il laptop è una risorsa; F1 gestisce la capacità di calcolo remota",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "B2.p1",
+      "to": "B1.p2",
+      "kind": "uses",
+      "note": "La libreria IA usa operazioni sui file senza diventare proprietaria degli originali",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "B3.p1",
+      "to": "B1.p2",
+      "kind": "uses",
+      "note": "La gestione Word dipende dalle operazioni file autorizzate",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "nextcloud.p2",
+      "to": "B1.p3",
+      "kind": "communicates_with",
+      "note": "Sincronizzazione cloud e accesso al filesystem sono responsabilità distinte",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T11.p3",
+      "to": "T10.p1",
+      "kind": "uses",
+      "note": "Il registro delle prove usa tracce, ma una trace non è un collaudo",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T11.p4.m1",
+      "to": "A1.p3.m1",
+      "kind": "verified_by",
+      "note": "La regressione di chat verifica solo il percorso coperto dal check, non tutte le funzioni",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "C1b.m2",
+      "to": "C1.p6",
+      "kind": "depends_on",
+      "note": "Idempotenza degli eventi e sincronizzazione Google/Cora richiedono verifiche separate",
+      "status": "proposed",
+      "provenance": "code-review-2026-11-09"
+    },
+    {
+      "from": "T14",
+      "to": "R6.2",
+      "kind": "depends_on",
+      "note": "Le approvazioni richiedono policy e autorizzazioni, ma non ne duplicano la proprietà",
+      "status": "proposed",
+      "provenance": "architecture-v3"
+    },
+    {
+      "from": "T14",
+      "to": "T2",
+      "kind": "uses",
+      "note": "Il ciclo di approvazione deve applicarsi a capability dichiarate e contratti verificabili",
+      "status": "proposed",
+      "provenance": "architecture-v3"
+    },
+    {
+      "from": "T14",
+      "to": "T4",
+      "kind": "uses",
+      "note": "Le decisioni approvate devono essere collegate agli effetti e agli stati dei run",
+      "status": "proposed",
+      "provenance": "architecture-v3"
+    }
+  ],
+  "visibility": {
+    "default": "roots-trunk-branches-stars",
+    "onSelect": "planets-and-moons",
+    "hideNestedUntilSelected": true,
+    "conceptualNotRuntime": true
+  },
+  "stateLegend": {
+    "present": "Presente nel codice o installato, non per forza collaudato",
+    "partial": "Parte presente o collaudo aperto",
+    "planned": "Obiettivo scelto non implementato",
+    "idea": "Possibilità da discutere",
+    "unverified": "Da verificare"
+  },
+  "provenancePolicy": "Timeline past remains empty until real decisions/commits with sources are linked. A user report is kept separate from backend/CI evidence. No automatic severity propagation.",
+  "v3": {
+    "schemaVersion": 3,
+    "nodeResponsibilities": {
+      "R1.1": "infrastructure",
+      "R1.2": "infrastructure",
+      "R1.3": "infrastructure",
+      "R1.4": "infrastructure",
+      "R2.1": "infrastructure",
+      "R2.2": "infrastructure",
+      "R3.1": "infrastructure",
+      "R3.2": "infrastructure",
+      "R4.1": "infrastructure",
+      "R4.2": "infrastructure",
+      "R5.1": "infrastructure",
+      "R5.2": "infrastructure",
+      "R6.1": "infrastructure",
+      "R6.2": "governance",
+      "T1": "user_capability",
+      "T2": "governance",
+      "T3": "governance",
+      "T4": "governance",
+      "T5": "governance",
+      "T6": "governance",
+      "T7": "governance",
+      "T8": "governance",
+      "T9": "governance",
+      "T10": "governance",
+      "T11": "governance",
+      "T12": "user_capability",
+      "T13": "governance",
+      "A1": "user_capability",
+      "A2": "user_capability",
+      "B1": "user_capability",
+      "B2": "user_capability",
+      "B3": "user_capability",
+      "C1": "user_capability",
+      "C2": "user_capability",
+      "C3": "user_capability",
+      "immich": "internal_service",
+      "nextcloud": "internal_service",
+      "magazzino": "internal_service",
+      "D4": "internal_service",
+      "D5": "internal_service",
+      "E1": "internal_service",
+      "E2": "user_capability",
+      "worker": "internal_service",
+      "F2": "user_capability",
+      "G1": "user_capability",
+      "T14": "governance"
+    },
+    "issues": [
+      {
+        "id": "legacy:R1.3.p1.m1:1",
+        "ownerNodeId": "R1.3.p1.m1",
+        "title": "Inferenza GPU riferita riuscita, ma modello effettivo e routing da certificare",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:R2.1.p2.m2:1",
+        "ownerNodeId": "R2.1.p2.m2",
+        "title": "Collocazione database sul NAS non decisa; non creare duplicazioni anagrafiche",
+        "kind": "architecture",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:R5.1.p2:1",
+        "ownerNodeId": "R5.1.p2",
+        "title": "Non risulta un restore complessivo collaudato sul Debian",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:R5.2.p3.m1:1",
+        "ownerNodeId": "R5.2.p3.m1",
+        "title": "L'updater host non gestisce ancora Immich/Nextcloud",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:T1.p1.m1:1",
+        "ownerNodeId": "T1.p1.m1",
+        "title": "Run diretto qwen3:1.7b completato ma lento (127,89 s), contro 54,46 s per prompt diverso in Ollama CLI; causa non isolata e confronti non omogenei.",
+        "kind": "improvement",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:T7:1",
+        "ownerNodeId": "T7",
+        "title": "Memoria non ancora collaudata completamente nell'uso reale dopo i cambiamenti",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:T9.p2:1",
+        "ownerNodeId": "T9.p2",
+        "title": "Code persistenti e scheduling multi-worker general-purpose non implementati",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:T11.p2.m2:1",
+        "ownerNodeId": "T11.p2.m2",
+        "title": "Test tecnici non equivalgono a E2E, import CI/updater nel registro non completo",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:A1:1",
+        "ownerNodeId": "A1",
+        "title": "Regressioni possibili Chat → supervisor → agente → risposta",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:B3.p1.m2:1",
+        "ownerNodeId": "B3.p1.m2",
+        "title": "Scrittura Word su documento di prova autentico ancora da collaudare",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:C1b.m2:1",
+        "ownerNodeId": "C1b.m2",
+        "title": "Rischio duplicazione appuntamenti da sync/audio e retry",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:C2.p1:1",
+        "ownerNodeId": "C2.p1",
+        "title": "Gmail: esistono tool ma integrazione account e flussi non collaudati",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:C3.p4.m1:1",
+        "ownerNodeId": "C3.p4.m1",
+        "title": "Pubblicazione Word approvata non ancora collaudata end-to-end",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:immich.p2.m1:1",
+        "ownerNodeId": "immich.p2.m1",
+        "title": "Mancano connettore Cora e updater host dedicato",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:nextcloud.p2.m2:1",
+        "ownerNodeId": "nextcloud.p2.m2",
+        "title": "Mancano integrazioni complete e updater host dedicato",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:D5.p2.m1:1",
+        "ownerNodeId": "D5.p2.m1",
+        "title": "Direzione Cora ancora prevalentemente vista testuale; mappa 2D e provenienza per stella da integrare",
+        "kind": "incomplete",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:E1.p2.m2:1",
+        "ownerNodeId": "E1.p2.m2",
+        "title": "Database SQL aziendale non censito come fonte autorevole, rischio duplicati",
+        "kind": "architecture",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:F2.p4.m2:1",
+        "ownerNodeId": "F2.p4.m2",
+        "title": "Un agente operativo non deve avere controllo generale del laptop",
+        "kind": "architecture",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      },
+      {
+        "id": "legacy:G1.p3:1",
+        "ownerNodeId": "G1.p3",
+        "title": "Verifica su modello potente e tool reali rinviata alla ripresa W3",
+        "kind": "missing_verification",
+        "state": "open",
+        "severity": "unknown",
+        "source": "legacy"
+      }
+    ],
+    "evidence": [],
+    "migration": {
+      "source": "knownIssues",
+      "policy": "v3.issues is the canonical issue register; knownIssues is a temporary V2 compatibility projection and must not be counted independently",
+      "nodeHierarchy": "unchanged",
+      "relations": "top-level relations remains canonical; v3 does not duplicate them",
+      "verification": "No runtime state inferred from code structure",
+      "classification": "Initial triage from documented issue wording; not proof of failure, severity or runtime status. Review each classification as new evidence arrives."
+    },
+    "responsibilityReview": {
+      "reviewedAt": "2026-11-09",
+      "status": "proposed_with_T14_planned",
+      "scope": "45 stars; classification describes architectural ownership, not implementation state",
+      "decisions": [
+        {
+          "nodes": [
+            "T2",
+            "R6.2"
+          ],
+          "decision": "keep_separate",
+          "reason": "T2 declares capabilities and tool contracts; R6.2 authorizes actions and scope. Shared checks are not shared ownership.",
+          "codeEvidence": [
+            "core/governance.py",
+            "core/permissions.py"
+          ]
+        },
+        {
+          "nodes": [
+            "T9",
+            "T4",
+            "worker"
+          ],
+          "decision": "keep_separate",
+          "reason": "T9 defines plans; T4 tracks run lifecycle and effects; F1 schedules execution across machines. Planning artifacts are not proof of scheduler integration.",
+          "codeEvidence": [
+            "core/plans.py",
+            "core/runtime.py",
+            "core/run_states.py"
+          ]
+        },
+        {
+          "nodes": [
+            "B1",
+            "B2",
+            "B3",
+            "nextcloud"
+          ],
+          "decision": "keep_separate_review_shared_tools",
+          "reason": "File operations, AI knowledge library, document formats and Nextcloud sync have different ownership; shared DOCX/file tools must be linked rather than duplicated.",
+          "codeEvidence": [
+            "core/library_tools.py",
+            "core/library_preflight.py"
+          ]
+        },
+        {
+          "nodes": [
+            "T10",
+            "T11",
+            "D5"
+          ],
+          "decision": "keep_separate",
+          "reason": "Tracing failures, verifying system health and visualizing architecture/evidence are different responsibilities; shared evidence must not certify independent tests.",
+          "codeEvidence": [
+            "core/health_catalog.py",
+            "deploy/verify_nodes.py",
+            "frontend/src/tree/roadmapEvidence.ts"
+          ]
+        },
+        {
+          "nodes": [
+            "R1.2",
+            "R1.3",
+            "worker",
+            "F2"
+          ],
+          "decision": "keep_separate",
+          "reason": "Physical devices, inference worker coordination and agents deployed on devices have distinct ownership."
+        },
+        {
+          "nodes": [
+            "R5.2",
+            "immich",
+            "nextcloud"
+          ],
+          "decision": "review_shared_capability",
+          "reason": "Host update mechanism is shared; service-specific integration belongs to the corresponding application. Avoid duplicate issue ownership."
+        },
+        {
+          "nodes": [
+            "D5",
+            "T12"
+          ],
+          "decision": "review_boundary",
+          "reason": "D5 owns Atlas model and evidence; T12 owns shared Cora UI navigation and shell, not the Atlas semantic model."
+        }
+      ],
+      "deferred": [
+        "No star moves or merges until individual planet/moon ownership is reviewed",
+        "Do not infer runtime success from Graphify code links",
+        "UI colors and layout unchanged"
+      ]
+    },
+    "trunkClassReview": {
+      "reviewedAt": "2026-11-09",
+      "status": "proposal_only",
+      "existingTrunkStars": 14,
+      "principle": "A trunk star owns a shared cross-program contract and lifecycle; no star for a UI page, incidental helper or merely planned feature.",
+      "candidates": [
+        {
+          "proposedId": "T14",
+          "title": "Governance operativa e approvazioni",
+          "recommendation": "promoted_as_planned",
+          "scope": [
+            "Approval lifecycle and explicit human consent",
+            "Policy enforcement at capability execution boundary",
+            "Auditability of authorized side effects"
+          ],
+          "existingOwners": [
+            "R6.2",
+            "T2",
+            "T4"
+          ],
+          "boundary": "R6.2 remains permission policy and identity; T2 remains capability contract; T4 remains run lifecycle. T14 would own approval decisions and enforcement coordination, not duplicate those modules.",
+          "codeEvidence": [
+            "core/governance.py",
+            "core/permissions.py",
+            "core/approvals.py"
+          ],
+          "verification": "Review actual approval enforcement paths before moving nodes."
+        },
+        {
+          "proposedId": "T15",
+          "title": "Integrazioni e connettori esterni",
+          "recommendation": "conditional",
+          "scope": [
+            "Common provider connection state and credential lifecycle",
+            "Provider health and reconnect handling",
+            "Shared connector contracts"
+          ],
+          "existingOwners": [
+            "C1",
+            "C2",
+            "immich",
+            "nextcloud"
+          ],
+          "boundary": "Calendar/Gmail/Immich/Nextcloud retain their domain actions. No centralized connector framework was proven; do not mark it implemented.",
+          "codeEvidence": [
+            "email_agent/email_connector.py",
+            "core/calendar_api.py"
+          ],
+          "verification": "First inventory actual provider adapters and secret storage; avoid duplicating service-specific integrations."
+        },
+        {
+          "proposedId": "T16",
+          "title": "Gestione risorse e assegnazione esecuzioni",
+          "recommendation": "conditional",
+          "scope": [
+            "Resource quotas, concurrency and model execution capacity",
+            "Machine availability and job assignment policy",
+            "Worker admission and controlled failover"
+          ],
+          "existingOwners": [
+            "T9",
+            "T4",
+            "worker",
+            "R3.2"
+          ],
+          "boundary": "T9 plans logical tasks; T4 records lifecycle; F1 operates workers. A separate scheduler star is justified only if shared beyond worker inference.",
+          "codeEvidence": [
+            "core/models.py",
+            "core/protocol.py"
+          ],
+          "verification": "Inventory worker scheduler and queue implementations before extracting responsibility."
+        }
+      ],
+      "notRecommended": [
+        {
+          "name": "Nuova stella per il modello IA",
+          "reason": "Already divided between model catalog R3.2, agent configuration T8 and worker F1; first document dependencies."
+        },
+        {
+          "name": "Nuova stella per i test E2E",
+          "reason": "T11 already owns verification; duplication would create false independent evidence."
+        },
+        {
+          "name": "Nuova stella per ogni provider",
+          "reason": "Provider-specific responsibilities already belong to the corresponding program/agent."
+        }
+      ],
+      "migrationRule": "No physical node creation, renaming or reparenting in this proposal. First decide exact planet/moon ownership and stable IDs; preserve existing links and issue ownership.",
+      "migrationNote": "T14 is now a canonical planned star with two planned planets and four planned moons; no existing implementation was moved or claimed."
+    },
+    "atAGlanceReview": {
+      "reviewedAt": "2026-11-09",
+      "status": "proposed",
+      "intent": "A glance view is a projection of the canonical tree, not a replacement hierarchy or runtime health certificate.",
+      "levels": [
+        {
+          "name": "panorama",
+          "show": "three regions plus seven functional branches; collapsed counts and attention summaries",
+          "hide": "planets, moons, full relations and long issue descriptions"
+        },
+        {
+          "name": "responsibilities",
+          "show": "stars in selected branch, grouped into conceptual families; concise status, verification and open issue counts",
+          "hide": "unselected branches and unrelated cross-links"
+        },
+        {
+          "name": "operations",
+          "show": "selected star planets/moons, owner issues, evidence provenance, dependencies and next work",
+          "hide": "global unrelated details"
+        }
+      ],
+      "regionGroups": [
+        {
+          "region": "radici",
+          "label": "Fondamenta",
+          "groups": [
+            {
+              "label": "Macchine e capacità",
+              "starIds": [
+                "R1.1",
+                "R1.2",
+                "R1.3",
+                "R1.4",
+                "R3.1",
+                "R3.2"
+              ]
+            },
+            {
+              "label": "Dati e ambiente",
+              "starIds": [
+                "R2.1",
+                "R2.2",
+                "R4.1",
+                "R4.2"
+              ]
+            },
+            {
+              "label": "Affidabilità e sicurezza",
+              "starIds": [
+                "R5.1",
+                "R5.2",
+                "R6.1",
+                "R6.2"
+              ]
+            }
+          ]
+        },
+        {
+          "region": "tronco",
+          "label": "Servizi comuni",
+          "groups": [
+            {
+              "label": "Decisione e pianificazione",
+              "starIds": [
+                "T1",
+                "T3",
+                "T9",
+                "T13"
+              ]
+            },
+            {
+              "label": "Esecuzione e contratti",
+              "starIds": [
+                "T2",
+                "T4",
+                "T5",
+                "T8",
+                "T14"
+              ]
+            },
+            {
+              "label": "Contesto e conoscenza",
+              "starIds": [
+                "T6",
+                "T7"
+              ]
+            },
+            {
+              "label": "Controllo e interfaccia",
+              "starIds": [
+                "T10",
+                "T11",
+                "T12"
+              ]
+            }
+          ]
+        },
+        {
+          "region": "rami",
+          "label": "Utilità e programmi",
+          "groups": [
+            {
+              "label": "Interazione",
+              "starIds": [
+                "A1",
+                "A2"
+              ]
+            },
+            {
+              "label": "File e documenti",
+              "starIds": [
+                "B1",
+                "B2",
+                "B3"
+              ]
+            },
+            {
+              "label": "Organizzazione e comunicazione",
+              "starIds": [
+                "C1",
+                "C2",
+                "C3"
+              ]
+            },
+            {
+              "label": "Applicazioni",
+              "starIds": [
+                "immich",
+                "nextcloud",
+                "magazzino",
+                "D4",
+                "D5"
+              ]
+            },
+            {
+              "label": "Lavoro commerciale",
+              "starIds": [
+                "E1",
+                "E2"
+              ]
+            },
+            {
+              "label": "Distribuzione del lavoro",
+              "starIds": [
+                "worker",
+                "F2"
+              ]
+            },
+            {
+              "label": "Programmazione",
+              "starIds": [
+                "G1"
+              ]
+            }
+          ]
+        }
+      ],
+      "attentionRules": [
+        "Show a parent as affected with scoped counts, not as globally broken because one descendant has an issue",
+        "Keep implementation, runtime verification and issue count independent",
+        "Distinguish proposed architecture from deployed behavior",
+        "Cross-links appear on selection, not as permanent full-screen lines",
+        "No inferred green from code existence or synthetic test success"
+      ],
+      "reviewFlags": [
+        {
+          "nodes": [
+            "T12",
+            "D5"
+          ],
+          "issue": "Atlas ownership vs generic UI shell",
+          "action": "Keep separate and label their distinct responsibilities"
+        },
+        {
+          "nodes": [
+            "T9",
+            "worker",
+            "T4"
+          ],
+          "issue": "Planner, scheduler and worker overlap",
+          "action": "Keep execution scheduler boundary explicit; candidate T16 remains conditional"
+        },
+        {
+          "nodes": [
+            "R6.2",
+            "T2"
+          ],
+          "issue": "Permissions and tool contracts overlap",
+          "action": "Keep policy and capability declarations separate; evaluate T14 approval lifecycle"
+        },
+        {
+          "nodes": [
+            "R5.2",
+            "immich",
+            "nextcloud"
+          ],
+          "issue": "Updater responsibility is repeated",
+          "action": "Keep common updater under R5.2 and service-specific upgrade checks under apps"
+        },
+        {
+          "nodes": [
+            "B1",
+            "B2",
+            "B3"
+          ],
+          "issue": "File storage, knowledge and document editing share operations",
+          "action": "Do not merge; label data ownership and document formats explicitly"
+        },
+        {
+          "nodes": [
+            "C1",
+            "C2",
+            "immich",
+            "nextcloud"
+          ],
+          "issue": "Provider integrations may justify common connector",
+          "action": "T15 remains proposal until actual connector ownership is inventoried"
+        }
+      ],
+      "migration": "T14 added as planned star (7 nodes); all pre-existing IDs and issue owners preserved. T15/T16 remain proposals."
+    },
+    "evolutionView": {
+      "reviewedAt": "2026-11-09",
+      "status": "proposed_with_T14_planned",
+      "principle": "One stable tree contains present implementation and future plans. Future nodes are visible placeholders, never inferred as deployed.",
+      "nodePhases": [
+        "idea",
+        "planned",
+        "partial",
+        "present"
+      ],
+      "verificationDimension": "Independent of node phase; code evidence is not runtime verification.",
+      "defaultVisibility": {
+        "panorama": "Show current and future branches/stars; distinguish future placeholders with neutral gray; do not hide them",
+        "responsibilities": "Show existing and planned stars, concise counts of planned descendants and unresolved verification",
+        "detail": "Show planets/moons and future milestones with evidence and temporal history"
+      },
+      "futureStarCandidates": [
+        {
+          "id": "T15",
+          "title": "Integrazioni e connettori esterni",
+          "region": "tronco",
+          "decision": "conditional"
+        },
+        {
+          "id": "T16",
+          "title": "Gestione risorse e assegnazione esecuzioni",
+          "region": "tronco",
+          "decision": "conditional"
+        }
+      ],
+      "existingPlannedStars": [
+        {
+          "id": "R1.4",
+          "title": "R1.4 · NAS dedicato",
+          "status": "planned"
+        },
+        {
+          "id": "E1",
+          "title": "E1 · Anagrafica clienti e CRM",
+          "status": "planned"
+        },
+        {
+          "id": "E2",
+          "title": "E2 · Assistente commerciale",
+          "status": "planned"
+        },
+        {
+          "id": "F2",
+          "title": "F2 · Agenti operativi sui dispositivi",
+          "status": "planned"
+        },
+        {
+          "id": "T14",
+          "title": "T14 · Approvazioni ed effetti autorizzati",
+          "status": "planned"
+        }
+      ],
+      "transitionRules": [
+        "Promote proposed candidate to canonical node only after responsibility and parent are approved",
+        "Never reuse or change canonical IDs during promotion",
+        "A planned node can contain implemented subcapabilities and vice versa; aggregate state is descriptive, not a test verdict",
+        "Do not create duplicate future nodes when a planned capability belongs under an existing star",
+        "Retain history and provenance across changes; future milestones are not bugs",
+        "Separate status of feature, verification and issue severity"
+      ],
+      "visualContract": {
+        "future": "Neutral gray, dotted outline or ghost star",
+        "partial": "Existing star with separate completion/verification markers",
+        "present": "Normal star, green only with scoped verified evidence",
+        "attention": "Small issue count or marker, not global red by inheritance",
+        "connections": "Future dependencies visible only on focus, with proposed provenance"
+      }
+    }
+  }
+}

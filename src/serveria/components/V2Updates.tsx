@@ -1,0 +1,22 @@
+import { useState } from 'react';
+import { Link } from '@tanstack/react-router';
+import { ArrowLeft, Check, ChevronRight, ClipboardCheck, GitBranch, History, Play, RotateCcw, ShieldCheck } from 'lucide-react';
+import { Button } from '@/components/ui/source-button';
+import { canApplyUpdate, type UpdatePhase } from '../alignment/model';
+import V2Nav from './V2Nav';
+import V2RepositoryStatus from './V2RepositoryStatus';
+const phases=['Preparazione','Compilazione immagini','Test','Backup dati','Prova migrazioni su copia','Avvio candidato','Applicazione','Controllo finale'];
+export default function V2Updates({embedded=false}:{embedded?:boolean}) {
+ const [phase,setPhase]=useState<UpdatePhase>('idle');const [base,setBase]=useState('base-demo');const [preparedBase,setPreparedBase]=useState('');const [commit,setCommit]=useState('');const [history,setHistory]=useState<string[]>([]);const [notice,setNotice]=useState('');
+ const prepare=()=>{setPhase('ready');setPreparedBase(base);setHistory(h=>[...h,'Preparazione candidata · simulata, test non eseguiti']);setNotice('Preparazione illustrativa pronta. Nessuna immagine compilata e nessun test eseguito.');};
+ const apply=()=>{if(!canApplyUpdate(phase,base,preparedBase))return;setPhase('applied');setHistory(h=>[...h,'Applicazione candidata · simulata, nessun servizio riavviato']);setNotice('Percorso di applicazione illustrato. Nessun aggiornamento installato.');};
+ const body=<><div className="pg-title"><div><span className="ops-overline">SISTEMA / RILASCI CONTROLLATI</span><h1>Aggiornamenti Cora<span>.</span></h1></div><ShieldCheck size={28}/></div><div className="repo-update-summary"><div><small>COMMIT ATTIVO SUL SERVER</small><strong>Non letto</strong></div><div><small>VERSIONE CANDIDATA</small><strong>{commit||'Non selezionata'}</strong></div><div><small>ESITO REALE</small><strong>Non verificato</strong></div></div>
+ <div className="repo-fields"><label>Riferimento candidato (bozza)<input aria-label="Riferimento candidato" value={commit} onChange={e=>{setCommit(e.target.value);setPhase('idle');}} placeholder="Commit o riferimento da verificare"/></label><label>Base di esempio<select aria-label="Base di esempio" value={base} onChange={e=>setBase(e.target.value)}><option value="base-demo">Base demo A</option><option value="different-demo">Base demo B</option></select></label></div>
+ <div className="repo-update-track">{phases.map((p,i)=><div key={p} className={phase==='applied'?'is-illustrated':phase==='ready'&&i<3?'is-illustrated':''}><span>{String(i+1).padStart(2,'0')}</span><strong>{p}</strong><ChevronRight size={12}/></div>)}</div>
+ <div className="repo-actions"><Button disabled={!commit.trim()} onClick={prepare}><ClipboardCheck size={15}/>Simula preparazione</Button><Button disabled={!canApplyUpdate(phase,base,preparedBase)} onClick={apply}><Play size={15}/>Simula applicazione</Button><Button onClick={()=>{setPhase('idle');setHistory(h=>[...h,'Ripristino precedente · simulato']);setNotice('Anteprima ripristinata. Nessun dato o container modificato.');}}><RotateCcw size={15}/>Anteprima rollback</Button></div>
+ {phase==='ready'&&base!==preparedBase&&<p className="repo-notice">Base diversa: applicazione bloccata. Prepara nuovamente la candidata sulla base corrente.</p>}
+ <p className="repo-boundary">Preparazione e applicazione sono operazioni distinte. Durante un riavvio il dato va indicato come ultimo noto; una richiesta dall’esito incerto non va ripetuta automaticamente.</p>{notice&&<p className="repo-notice" role="status">{notice}</p>}
+ <section className="repo-history"><h2><History size={16}/>Lavori dell’anteprima</h2>{history.length?history.map((h,i)=><p key={i}>{h}</p>):<p>Nessun lavoro illustrato. Storico reale, commit attivo, errori e servizio updater non collegati.</p>}</section><Link className="repo-cross-link" to="/v2-programs">Aggiornamenti delle applicazioni <GitBranch size={14}/></Link></>;
+ if(embedded)return <section className="repo-updates">{body}</section>;
+ return <div className="ops-page"><header className="ops-header"><Link to="/v2-home" className="ops-brand">serveria<span>2.0</span></Link><V2Nav/><div className="ops-header-right"><span className="ops-demo">ANTEPRIMA · NESSUNA INSTALLAZIONE</span><Link to="/v2-home" aria-label="Torna alla Home V2"><ArrowLeft size={17}/></Link></div></header><V2RepositoryStatus/><main className="repo-page-main">{body}</main></div>;
+}

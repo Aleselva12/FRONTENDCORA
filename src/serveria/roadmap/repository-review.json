@@ -1,0 +1,408 @@
+{
+  "repository": "Aleselva12/serveria1",
+  "branch": "main",
+  "revision": "0d0ea141f57fe29017a20486d7fa4dc55395b186",
+  "inspectedAt": "2026-11-15",
+  "baseline": "CORA-V2-2026-11-03",
+  "sources": [
+    "frontend/src/tree/cora-plan.snapshot.json",
+    "docs/project-status.json",
+    "docs/NODE_VERIFICATION.md",
+    "docs/HOST_MAINTENANCE.md",
+    "docs/NEXTCLOUD_AIO_MAINTENANCE.md",
+    "docs/GOOGLE_CALENDAR_SERVICE_ACCOUNT.md",
+    "docs/mail-setup.md"
+  ],
+  "updates": [
+    {
+      "id": "R5.2",
+      "title": "Manutenzione e rilasci Cora",
+      "present": "Manutenzione host e aggiornamento dell’updater con il rilascio presenti; la pagina separa Aggiorna Cora da Invia modifiche a GitHub. Nextcloud AIO ora ha un percorso dedicato; Immich resta aperto.",
+      "problems": [
+        "Accettazione systemd e recupero dopo interruzione ancora da eseguire sul Debian.",
+        "Il rollback del pacchetto updater non equivale al ripristino dei dati."
+      ],
+      "future": [
+        "Collaudare manutenzione e recupero in un ambiente sacrificabile.",
+        "Completare aggiornamenti Immich; non trasferire automaticamente la certificazione da Nextcloud."
+      ],
+      "refs": [
+        "W2",
+        "BACKUP-UPDATE"
+      ],
+      "history": [
+        {
+          "sha": "d20921ed48902bd94190ed3c643cb858e526893c",
+          "date": "2026-11-10T21:41:56Z",
+          "title": "feat(updater): add host maintenance lifecycle and verification prerequisite",
+          "url": "https://github.com/Aleselva12/serveria1/commit/d20921ed48902bd94190ed3c643cb858e526893c"
+        },
+        {
+          "sha": "d18d8b66ba7f08b51acc1fcd343f99576baf7f07",
+          "date": "2026-11-12T09:31:35Z",
+          "title": "Updater: si aggiorna con il rilascio, ricostruisce il terminale e mostra le versioni",
+          "url": "https://github.com/Aleselva12/serveria1/commit/d18d8b66ba7f08b51acc1fcd343f99576baf7f07"
+        },
+        {
+          "sha": "e17ce37c8446104d96af91bf579ecbac7ae031fa",
+          "date": "2026-11-15T22:14:58Z",
+          "title": "feat(aggiorna): pagina divisa in \"Aggiorna Cora\" e \"Invia modifiche a GitHub\"",
+          "url": "https://github.com/Aleselva12/serveria1/commit/e17ce37c8446104d96af91bf579ecbac7ae031fa"
+        }
+      ],
+      "planets": [
+        {
+          "id": "R5.2.review.1",
+          "name": "Manutenzione del pacchetto host",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "R5.2.review.1.m1",
+              "name": "Digest delle sorgenti e versione installata",
+              "status": "v1"
+            },
+            {
+              "id": "R5.2.review.1.m2",
+              "name": "Blocco lavori concorrenti e recovery_required",
+              "status": "v1"
+            },
+            {
+              "id": "R5.2.review.1.m3",
+              "name": "Helper systemd e recupero della generazione precedente",
+              "status": "v1"
+            }
+          ]
+        },
+        {
+          "id": "R5.2.review.2",
+          "name": "Due direzioni del rilascio",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "R5.2.review.2.m1",
+              "name": "Aggiorna Cora da GitHub dopo preparazione e test",
+              "status": "v1"
+            },
+            {
+              "id": "R5.2.review.2.m2",
+              "name": "Invia un rilascio verificato su ramo dedicato",
+              "status": "v1"
+            },
+            {
+              "id": "R5.2.review.2.m3",
+              "name": "Divergenza: merge esplicito prima di aggiornare",
+              "status": "v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nextcloud",
+      "title": "Backup e aggiornamento Nextcloud AIO",
+      "present": "Backup prima dell’aggiornamento, verifica Borg/AIO e occ status, job persistenti e recupero esplicito sono implementati in repository.",
+      "problems": [
+        "Restore non collaudato; dati e backup iniziali sullo stesso disco fisico.",
+        "Il codice e i test simulati non attestano l’attivazione della funzione sul server."
+      ],
+      "future": [
+        "Provare backup/aggiornamento tramite Cora e ripristino su istanza sacrificabile.",
+        "Verificare recupero dopo interruzione e copia su un supporto distinto."
+      ],
+      "refs": [
+        "W2",
+        "BACKUP-UPDATE"
+      ],
+      "history": [
+        {
+          "sha": "ed13101b12accb86bf6c8f11595c4ccb21bcfeca",
+          "date": "2026-11-10T22:25:18Z",
+          "title": "feat(nextcloud): integrate AIO backup update and explicit recovery",
+          "url": "https://github.com/Aleselva12/serveria1/commit/ed13101b12accb86bf6c8f11595c4ccb21bcfeca"
+        }
+      ],
+      "planets": [
+        {
+          "id": "nextcloud.review.1",
+          "name": "Manutenzione AIO governata",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "nextcloud.review.1.m1",
+              "name": "Backup Borg completato prima dell’update",
+              "status": "v1"
+            },
+            {
+              "id": "nextcloud.review.1.m2",
+              "name": "Controllo container e occ status",
+              "status": "v1"
+            },
+            {
+              "id": "nextcloud.review.1.m3",
+              "name": "Nessun restore automatico; recupero confermato dall’operatore",
+              "status": "v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "title": "Calendario condiviso e aggiornamenti persistenti",
+      "present": "Aggiunto accesso al calendario condiviso tramite Service Account; configurazione e bind persistono negli snapshot updater e nei rollback. C1a–C1e restano distinti.",
+      "problems": [
+        "L’accesso reale al provider e il ciclo evento unico → notifica richiedono collaudo.",
+        "Permessi Calendar: due test Windows documentati falliscono sul confronto dei mode Unix; verificare su Linux."
+      ],
+      "future": [
+        "Verificare lettura, ID calendario esplicito, approvazioni ed ETag sul provider reale.",
+        "Non considerare le notifiche o gli inviti verificati dalla sola configurazione."
+      ],
+      "refs": [
+        "CALENDAR-MAIL"
+      ],
+      "history": [
+        {
+          "sha": "42514c5e5a71351d30914c12000adc1c39a29a39",
+          "date": "2026-11-10T22:00:02Z",
+          "title": "feat(calendar): support shared calendar service account",
+          "url": "https://github.com/Aleselva12/serveria1/commit/42514c5e5a71351d30914c12000adc1c39a29a39"
+        },
+        {
+          "sha": "2fe00de5ffaa5a935daf443f628fb16d3ae0cc4e",
+          "date": "2026-11-10T23:12:31Z",
+          "title": "feat(deploy): reconcile Calendar service account in persistent updater snapshot",
+          "url": "https://github.com/Aleselva12/serveria1/commit/2fe00de5ffaa5a935daf443f628fb16d3ae0cc4e"
+        }
+      ],
+      "planets": [
+        {
+          "id": "C1.review.1",
+          "name": "Identità e configurazione del calendario",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "C1.review.1.m1",
+              "name": "Calendario condiviso esplicito, non primary",
+              "status": "v1"
+            },
+            {
+              "id": "C1.review.1.m2",
+              "name": "OAuth conservato senza fallback silenzioso",
+              "status": "v1"
+            },
+            {
+              "id": "C1.review.1.m3",
+              "name": "Bind e configurazione mantenuti fra update e rollback",
+              "status": "v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "title": "Posta separata e riepiloghi notturni",
+      "present": "Pagina Mail in sola lettura con account A/B separati e vista Tutti. Riepiloghi su richiesta e nuovo riepilogo notturno con Ollama del server, con un solo esecutore nella finestra notturna.",
+      "problems": [
+        "OAuth/Gmail reale e inferenza dei riepiloghi non collaudati qui.",
+        "Il riepilogo su richiesta copre oggetti/anteprime dei primi 20 messaggi per account, non l’intera casella.",
+        "Il documento Mail iniziale descrive assenza di scheduler; i commit del 15 novembre aggiungono un runner notturno: distinguere le due versioni."
+      ],
+      "future": [
+        "Collaudare account e limiti di copertura senza inviare o modificare messaggi.",
+        "Verificare finestra notturna, lock e risultati del modello locale.",
+        "La bozza per Automazioni resta un contratto disabilitato, non un workflow operativo."
+      ],
+      "refs": [
+        "CALENDAR-MAIL"
+      ],
+      "history": [
+        {
+          "sha": "8c5fc46aaca4fa5485aae1ae5f4b3b1ab21f09a3",
+          "date": "2026-11-14T22:52:26Z",
+          "title": "feat(mail): add separate read-only Gmail accounts and on-demand summaries",
+          "url": "https://github.com/Aleselva12/serveria1/commit/8c5fc46aaca4fa5485aae1ae5f4b3b1ab21f09a3"
+        },
+        {
+          "sha": "114830c51c6b7f13aab24a1dd9c07cefa0885081",
+          "date": "2026-11-15T20:55:07Z",
+          "title": "feat(mail): riepilogo notturno in background con Ollama del server",
+          "url": "https://github.com/Aleselva12/serveria1/commit/114830c51c6b7f13aab24a1dd9c07cefa0885081"
+        },
+        {
+          "sha": "0166b975f61606d4100cf630215ba7b52838ebff",
+          "date": "2026-11-15T21:55:20Z",
+          "title": "fix(mail): un solo esecutore del riepilogo e solo nella finestra notturna",
+          "url": "https://github.com/Aleselva12/serveria1/commit/0166b975f61606d4100cf630215ba7b52838ebff"
+        }
+      ],
+      "planets": [
+        {
+          "id": "C2.review.1",
+          "name": "Account indipendenti e copertura",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "C2.review.1.m1",
+              "name": "Account A, B e Tutti con autorizzazioni distinte",
+              "status": "v1"
+            },
+            {
+              "id": "C2.review.1.m2",
+              "name": "Lettura senza segnare come letto e nessun invio",
+              "status": "v1"
+            },
+            {
+              "id": "C2.review.1.m3",
+              "name": "Riepilogo su richiesta con copertura limitata",
+              "status": "v1"
+            }
+          ]
+        },
+        {
+          "id": "C2.review.2",
+          "name": "Riepilogo notturno locale",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "C2.review.2.m1",
+              "name": "Ollama del server distinto dal worker su richiesta",
+              "status": "v1"
+            },
+            {
+              "id": "C2.review.2.m2",
+              "name": "Un solo esecutore nella finestra notturna",
+              "status": "v1"
+            },
+            {
+              "id": "C2.review.2.m3",
+              "name": "Consegna e Automazioni non implicite",
+              "status": "v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "Collaudi, inventario e provenienza",
+      "present": "Inventario dei test, evidenze per commit/ambiente e 19 suite di repository collegati; aggiunti esito warn, avvio una volta per versione installata e audit dipendenze.",
+      "problems": [
+        "La presenza di suite e CI non certifica il Debian.",
+        "Documentazione precedente parla di avvio solo manuale; il codice successivo introduce anche l’avvio per versione: preservare questa distinzione."
+      ],
+      "future": [
+        "Verificare sul Debian deduplicazione per versione, progressi ed esiti.",
+        "Separare prove locali, manuali datate ed E2E sulla versione installata."
+      ],
+      "refs": [
+        "AUTO-QUALITY",
+        "W1"
+      ],
+      "history": [
+        {
+          "sha": "4e074f37b75c7e5c19ce651814ef181398ffd260",
+          "date": "2026-11-12T15:39:21Z",
+          "title": "Collaudi: esito \"warn\" (funziona con avvisi) e giallo nell'albero",
+          "url": "https://github.com/Aleselva12/serveria1/commit/4e074f37b75c7e5c19ce651814ef181398ffd260"
+        },
+        {
+          "sha": "38bde41356679d1a97494a1987bf141ab5edfb64",
+          "date": "2026-11-12T16:01:05Z",
+          "title": "Albero: 19 suite con i test del repository già esistenti",
+          "url": "https://github.com/Aleselva12/serveria1/commit/38bde41356679d1a97494a1987bf141ab5edfb64"
+        },
+        {
+          "sha": "20ec683d5c2c40892de0add0342b275321c25223",
+          "date": "2026-11-12T16:22:18Z",
+          "title": "Collaudi: avvio automatico una volta per ogni versione installata",
+          "url": "https://github.com/Aleselva12/serveria1/commit/20ec683d5c2c40892de0add0342b275321c25223"
+        },
+        {
+          "sha": "5c7f29251fbc98acfc86ef0797c75380bc7e3b36",
+          "date": "2026-11-12T16:43:36Z",
+          "title": "Sicurezza: audit dipendenze nel collaudo, aggiornamenti automatici e CI",
+          "url": "https://github.com/Aleselva12/serveria1/commit/5c7f29251fbc98acfc86ef0797c75380bc7e3b36"
+        }
+      ],
+      "planets": [
+        {
+          "id": "T11.review.1",
+          "name": "Esiti e ciclo per versione",
+          "status": "v1",
+          "note": "Codice o contratto presente nella revisione ispezionata; nessuna verifica live effettuata qui.",
+          "moons": [
+            {
+              "id": "T11.review.1.m1",
+              "name": "warn distinto dal fallimento",
+              "status": "v1"
+            },
+            {
+              "id": "T11.review.1.m2",
+              "name": "Avvio automatico una volta per versione installata",
+              "status": "v1"
+            },
+            {
+              "id": "T11.review.1.m3",
+              "name": "Audit delle dipendenze e 19 suite collegate",
+              "status": "v1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R6.2",
+      "title": "Sicurezza e dipendenze",
+      "present": "Audit dipendenze integrato nei collaudi e nella CI; patch e lock aggiornati. T14 separa il futuro ciclo comune delle approvazioni dai permessi già presenti.",
+      "problems": [
+        "Patch di dipendenze e test locali non certificano la sicurezza del server installato."
+      ],
+      "future": [
+        "Verificare il rilascio installato e mantenere espliciti permessi, revoca e approvazioni."
+      ],
+      "refs": [
+        "AUTO-QUALITY"
+      ],
+      "history": [
+        {
+          "sha": "5c7f29251fbc98acfc86ef0797c75380bc7e3b36",
+          "date": "2026-11-12T16:43:36Z",
+          "title": "Sicurezza: audit dipendenze nel collaudo, aggiornamenti automatici e CI",
+          "url": "https://github.com/Aleselva12/serveria1/commit/5c7f29251fbc98acfc86ef0797c75380bc7e3b36"
+        },
+        {
+          "sha": "7106b79fb167681c6258adec41046f13e586f969",
+          "date": "2026-11-14T21:20:31Z",
+          "title": "fix: patch audited Python dependencies and Alpine web packages",
+          "url": "https://github.com/Aleselva12/serveria1/commit/7106b79fb167681c6258adec41046f13e586f969"
+        }
+      ],
+      "planets": []
+    },
+    {
+      "id": "T1",
+      "title": "Base V1 e sviluppo successivo",
+      "present": "W1 è completato come base architetturale in repository. Supervisor/LangGraph resta l’ingresso; router shadow non autorevole. Le verifiche della versione Debian sono separate.",
+      "problems": [
+        "Prestazioni e diagnosi causale avanzata non sono certificate dal completamento della base V1."
+      ],
+      "future": [
+        "Validare router shadow, Context Manager progressivo e scheduler prima dell’autonomia."
+      ],
+      "refs": [
+        "W1",
+        "ARCH-ORCHESTRATOR"
+      ],
+      "history": [],
+      "planets": []
+    }
+  ]
+}
